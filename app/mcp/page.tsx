@@ -62,7 +62,7 @@ const TIERS = [
   },
   {
     plan: "Builder+",
-    gets: "Matches, live player kills/deaths/assists under 2s, get_live_boxscore, gamelogs, finished boxscores, results, history tape",
+    gets: "Matches, live player kills/deaths/assists under 2s, get_live_boxscore, gamelogs, finished boxscores, get_match_prep / get_player_board / get_tournament_maps, results, history tape",
   },
 ]
 

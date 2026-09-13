@@ -65,6 +65,24 @@ export const MCP_TOOLS: McpTool[] = [
     tier: "builder",
     group: "schedule",
   },
+  {
+    id: "get_match_prep",
+    when: "CS2 team stats, map pool, form, H2H for a match.",
+    tier: "builder",
+    group: "schedule",
+  },
+  {
+    id: "get_player_board",
+    when: "CS2 player averages + favourite weapons for a match.",
+    tier: "builder",
+    group: "schedule",
+  },
+  {
+    id: "get_tournament_maps",
+    when: "CS2 tournament map picks/bans + side winrates.",
+    tier: "builder",
+    group: "schedule",
+  },
   { id: "get_results", when: "Settled prop grades (hit/miss/push).", tier: "builder", group: "schedule" },
   { id: "get_history_tape", when: "Quote tape for a prop/book over time.", tier: "builder", group: "schedule" },
 ]
