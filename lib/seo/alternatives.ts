@@ -122,7 +122,7 @@ export const ABIOS_CALLS = [
 export const ABIOS_MIGRATION = [
   {
     title: "Stop waiting on a quote.",
-    body: "Create a Sandbox key now. If you already have an Abios quote, you can compare it to published KashRock plans on /pricing.",
+    body: "Create a Sandbox key now. If you already have an Abios quote, you can compare it to published KashRock plans on the pricing page.",
   },
   {
     title: "Swap host and auth.",
