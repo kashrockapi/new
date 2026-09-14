@@ -29,22 +29,21 @@ export default function DocsPage() {
   return (
     <DocsShell active="overview">
       <h1 className="text-4xl font-semibold text-white mb-4 tracking-tight">
-        Esports data API
+        Esports Data API
       </h1>
       <p className="text-lg text-zinc-400 leading-relaxed mb-8">
         KashRock is a DaaS for esports books and apps. Prefer the{" "}
         <Link href="/mcp" className="text-white underline">
-          esports MCP
+          Esports MCP
         </Link>{" "}
         in Cursor/Claude so you never hunt endpoints. App builders:{" "}
-        <a href="https://github.com/ovitalszn-cyber/kashrock-python" className="text-white underline">
-          Python SDK
-        </a>{" "}
-        or{" "}
-        <a href="https://github.com/ovitalszn-cyber/kashrock-js" className="text-white underline">
-          JS SDK
-        </a>
-        . HTTP stays for power users. Base URL{" "}
+        <Link href="/docs/sdk" className="text-white underline">
+          SDKs
+        </Link>{" "}
+        (<code className="text-white">npm install kashrock</code>
+        {" / "}
+        <code className="text-white">pip install kashrock</code>
+        ). HTTP stays for power users. Base URL{" "}
         <code className="text-white">{API_BASE}</code>.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
 
+import { SdkPanel } from "@/components/docs/SdkPanel"
 import { FaqGrid } from "@/components/seo/FaqGrid"
 import { JsonLd } from "@/components/seo/JsonLd"
 import { MarketingShell } from "@/components/seo/MarketingShell"
+import { DEMO_API_KEY, SDKS } from "@/lib/sdk"
 import { faqPageLd } from "@/lib/seo/schema"
 
 export const metadata: Metadata = {
@@ -29,8 +31,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "How do I get an API key?",
-    a: "Sign in and create a free Sandbox key instantly from the console — no card, no sales call.",
+    q: "Can I try it without signing up?",
+    a: "Yes. The snippets include a read-only demo key that returns a live LoL prop. Create your own key in the console when you need the rest of the board.",
   },
   {
     q: "What's the base URL?",
@@ -38,19 +40,22 @@ const faqs = [
   },
   {
     q: "What are the rate limits on the free tier?",
-    a: "The Sandbox tier is for development and testing; paid plans from $29/mo raise the limits for production.",
+    a: "The demo key is 2 requests/minute. Sandbox is for development; paid plans from $29/mo raise the limits for production.",
   },
 ] as const
 
 const STEPS = [
-  { name: "Get a free key", text: "Create a Sandbox key in the console." },
   {
-    name: "Call the API",
-    text: "GET /v6/esports/cs2/props with your key in the X-API-Key header.",
+    name: "Install and run",
+    text: "npm install kashrock (or pip install kashrock) and run the snippet with the demo key.",
   },
   {
-    name: "Parse the response",
-    text: "Read normalized props: player, stat type, line, direction, book.",
+    name: "Get your own key",
+    text: "Create a key in the console when you need more than the demo LoL prop.",
+  },
+  {
+    name: "Read the live prop",
+    text: "The first object is a live LoL prop: player, stat, line, direction, book.",
   },
 ] as const
 
@@ -82,47 +87,48 @@ export default function QuickstartPage() {
             <span className="seo-grad">First call in under 30 seconds.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-400 mb-12 font-light leading-relaxed">
-            Three steps from zero to normalized esports data. Free key, no sales call.
+            Paste the snippet. Live LoL prop, no signup.
           </p>
 
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-white mb-4">
-            1. Get a free key
+            1. Install and run
+          </h2>
+          <p className="text-base text-zinc-400 mb-6 leading-relaxed">
+            Demo key is in the example. Full clients on{" "}
+            <a href="/docs/sdk" className="text-white underline">
+              SDKs
+            </a>
+            .
+          </p>
+          {SDKS.map((sdk) => (
+            <SdkPanel key={sdk.name} sdk={sdk} />
+          ))}
+          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-10">{`# curl
+curl -H "X-API-Key: ${DEMO_API_KEY}" \\
+  "https://kashrock.up.railway.app/v6/esports/lol/props"`}</pre>
+
+          <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-white mb-4">
+            2. Get your own key
           </h2>
           <p className="text-base text-zinc-400 mb-10 leading-relaxed">
-            Create a Sandbox key in the{" "}
+            Create a key in the{" "}
             <a href="/console" className="text-white underline">
               console
             </a>{" "}
-            — instant, no card.
+            when you need more than the demo LoL prop — instant, no card.
           </p>
 
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-white mb-4">
-            2. Make the call
+            3. That&apos;s a live LoL prop
           </h2>
-          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-4">{`# python
-pip install kashrock
-from kashrock import KashRock
-print(KashRock("YOUR_KEY").props("cs2")["props"][0])`}</pre>
-          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-4">{`# javascript
-npm install kashrock
-import { KashRock } from "kashrock"
-console.log((await new KashRock("YOUR_KEY").props("cs2")).props[0])`}</pre>
-          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-10">{`# curl
-curl -H "X-API-Key: YOUR_KEY" \\
-  "https://kashrock.up.railway.app/v6/esports/cs2/props"`}</pre>
-
-          <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-white mb-4">
-            3. Read the response
-          </h2>
-          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-8">{`{
-  "propId": "kr_prop_959e4bdd3a1d",
-  "player_name": "Ax1Le",
-  "stat_type": "CS2_HEADSHOTS_MAPS_1_2",
-  "line": 15.5,
-  "direction": "over",
-  "book_name": "PrizePicks",
-  "team": "1win"
-}`}</pre>
+          <p className="text-base text-zinc-400 leading-relaxed mb-8">
+            Player, stat, line, book, KashRock IDs. Matches, live, research, and history tape
+            are on the same client — see{" "}
+            <a href="/docs/sdk" className="text-white underline">
+              SDKs
+            </a>
+            .
+          </p>
           <p className="text-base text-zinc-400 leading-relaxed">
             That&apos;s it. Full endpoints in the{" "}
             <a href="/docs" className="text-white underline">

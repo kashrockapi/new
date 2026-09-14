@@ -33,6 +33,7 @@ export const DOC_NAV: { title: string; items: NavItem[] }[] = [
     items: [
       { href: '/docs', label: 'Overview', id: 'overview' },
       { href: '/docs/mcp', label: 'MCP', id: 'mcp' },
+      { href: '/docs/sdk', label: 'SDKs', id: 'sdk' },
       { href: '/docs#authentication', label: 'Authentication', id: 'authentication' },
     ],
   },

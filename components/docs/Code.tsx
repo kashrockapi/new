@@ -1,5 +1,14 @@
 import { API_BASE } from '@/lib/docs'
 
+export function Snippet({ title, code }: { title: string; code: string }) {
+  return (
+    <div className="bg-[#0C0D0F] border border-white/10 rounded-md overflow-hidden font-mono text-sm mb-4">
+      <div className="bg-white/5 px-4 py-2 border-b border-white/5 text-zinc-500">{title}</div>
+      <pre className="p-4 overflow-x-auto text-zinc-300 whitespace-pre-wrap">{code}</pre>
+    </div>
+  )
+}
+
 export function Curl({ path }: { path: string }) {
   return (
     <div className="bg-[#0C0D0F] border border-white/10 rounded-md overflow-hidden font-mono text-sm mb-8">

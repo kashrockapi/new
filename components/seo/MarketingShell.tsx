@@ -1,8 +1,7 @@
 import type { ReactNode } from "react"
 
 import LandingAuthNav from "@/components/LandingAuthNav"
-import { EsportsApiLink } from "@/components/seo/EsportsApiLink"
-import { EsportsMcpLink } from "@/components/seo/EsportsMcpLink"
+import { SiteFooterLinks } from "@/components/seo/SiteFooterLinks"
 import { SportLogoRow } from "@/components/seo/SportLogoRow"
 
 const NAV = [
@@ -44,15 +43,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
           <SportLogoRow className="mb-10 opacity-80" />
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-zinc-600">© 2026 KashRock Inc. All rights reserved.</p>
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-              <a href="/build-esports-app" className="text-sm text-zinc-600 hover:text-white">Build an esports app</a>
-              <a href="/quickstart" className="text-sm text-zinc-600 hover:text-white">Quickstart</a>
-              <EsportsApiLink className="text-sm text-zinc-600 hover:text-white" />
-              <a href="/dfs-esports-api" className="text-sm text-zinc-600 hover:text-white">DFS Esports API</a>
-              <EsportsMcpLink className="text-sm text-zinc-600 hover:text-white" />
-              <a href="/docs" className="text-sm text-zinc-600 hover:text-white">Docs</a>
-              <a href="/legal" className="text-sm text-zinc-600 hover:text-white">Privacy</a>
-            </div>
+            <SiteFooterLinks className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2" />
           </div>
         </div>
       </footer>

@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mcp",
     "/legal",
     "/docs",
+    "/docs/sdk",
     "/docs/api-reference",
     "/docs/markets",
     "/docs/mcp",

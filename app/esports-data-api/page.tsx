@@ -73,10 +73,11 @@ export default function EsportsDataApiPage() {
             ))}
           </div>
           <p className="text-base text-zinc-400 mt-10">
-            Python:{" "}
-            <a href="https://github.com/ovitalszn-cyber/kashrock-python" className="text-white underline">kashrock-python</a>
-            {" "}· JS:{" "}
-            <a href="https://github.com/ovitalszn-cyber/kashrock-js" className="text-white underline">kashrock-js</a>
+            <a href="/docs/sdk" className="text-white underline">SDKs</a>
+            :{" "}
+            <code className="text-white">npm install kashrock</code>
+            {" "}·{" "}
+            <code className="text-white">pip install kashrock</code>
           </p>
         </div>
       </section>
@@ -109,11 +110,11 @@ export default function EsportsDataApiPage() {
           <a href="/kalshi-api" className="text-white underline">Kalshi API</a>, or{" "}
           <a href="/polymarket-api" className="text-white underline">Polymarket API</a>. Line shopping
           lives on the{" "}
-          <a href="/esports-odds-api" className="text-white underline">esports odds API</a>. Full board:{" "}
+          <a href="/esports-odds-api" className="text-white underline">Esports Odds API</a>. Full board:{" "}
           <a href="/dfs-esports-api" className="text-white underline">DFS Esports API</a>. Backtests use{" "}
-          <a href="/historical-esports-data-api" className="text-white underline">historical esports data</a>. Use it from Cursor via the{" "}
-          <a href="/mcp" className="text-white underline">esports MCP</a>. See{" "}
-          <a href="/coverage" className="text-white underline">coverage</a> for titles and books.
+          <a href="/historical-esports-data-api" className="text-white underline">Historical Esports Data</a>. Use it from Cursor via the{" "}
+          <a href="/mcp" className="text-white underline">Esports MCP</a>. See{" "}
+          <a href="/coverage" className="text-white underline">Coverage</a> for titles and books.
         </p>
       </section>
       <section className="py-16 max-w-7xl mx-auto px-6">
