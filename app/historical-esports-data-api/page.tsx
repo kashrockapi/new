@@ -188,7 +188,7 @@ export default function HistoricalEsportsDataApiPage() {
           </a>
           . Full route list on the{" "}
           <a href="/esports-data-api" className="text-white underline">
-            esports API
+            Esports API
           </a>{" "}
           page.
         </p>

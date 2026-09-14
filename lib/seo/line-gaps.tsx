@@ -123,7 +123,7 @@ export const LINE_GAPS_REF: SportRefContent = {
     { href: "/dfs-esports-api", label: "DFS Esports API" },
     { href: "/docs/endpoints/gaps", label: "Gaps docs" },
     { href: "/docs/endpoints/props", label: "Props docs" },
-    { href: "/mcp", label: "esports MCP" },
+    { href: "/mcp", label: "Esports MCP" },
     { href: "/coverage", label: "Coverage" },
   ],
   sections: {

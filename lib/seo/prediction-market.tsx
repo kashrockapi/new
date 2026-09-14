@@ -223,7 +223,7 @@ export const PREDICTION_MARKET_REF: SportRefContent = {
         <code className="text-zinc-200">polymarket</code>. Consensus:{" "}
         <code className="text-zinc-200">/lines</code>. Deep dive:{" "}
         <a href="/esports-consensus-api" className="text-white underline">
-          esports consensus API
+          Esports Consensus API
         </a>
         .
       </p>

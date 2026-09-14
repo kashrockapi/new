@@ -7,7 +7,7 @@ export function EsportsMcpLink({
 }: EsportsMcpLinkProps) {
   return (
     <a href="/mcp" className={className}>
-      esports MCP
+      Esports MCP
     </a>
   )
 }

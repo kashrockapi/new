@@ -121,11 +121,11 @@ export default function EsportsApiFreeTierPage() {
             <p>
               Move to Hobby when you need multi-title coverage or steady production traffic. See{" "}
               <a href="/esports-api-pricing" className="text-white underline">
-                esports API pricing
+                Esports API Pricing
               </a>{" "}
               for the full menu, the{" "}
               <a href="/esports-data-api" className="text-white underline">
-                esports API
+                Esports API
               </a>
               , or the{" "}
               <a href="/cs2-api" className="text-white underline">

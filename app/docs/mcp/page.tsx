@@ -28,7 +28,7 @@ export default function DocsMcpPage() {
         Prefer MCP over hunting HTTP paths. Paste the snippet in Cursor or Claude Desktop, say
         “log in to KashRock,” then ask in plain English. Marketing guide:{" "}
         <Link href="/mcp" className="text-white underline">
-          esports MCP
+          Esports MCP
         </Link>
         .
       </p>

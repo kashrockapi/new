@@ -42,4 +42,16 @@ export const GAME_LOGOS = [
     alt: "Deadlock",
     invert: true,
   },
+  {
+    id: "mlbb",
+    src: "https://upload.wikimedia.org/wikipedia/commons/1/12/Mobile_Legends_Logo.webp",
+    alt: "Mobile Legends: Bang Bang",
+    invert: false,
+  },
+  {
+    id: "apex",
+    src: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Apex_Legends_logo.svg",
+    alt: "Apex Legends",
+    invert: true,
+  },
 ] as const

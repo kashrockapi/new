@@ -15,7 +15,7 @@ const FEATURES: { title: string; body: string }[] = [
     body: "CS2, Valorant, League of Legends, Dota 2, Call of Duty, Rainbow Six, and Deadlock — normalized across schedules, market props, player metrics, and verified outcomes.",
   },
   {
-    title: "Live scoreboard + Historical",
+    title: "Live Scoreboard + Historical",
     body: "Live player kills, deaths, and assists updated in under 2 seconds. Pull upcoming, live, and completed matches — including box scores and game logs for any date.",
   },
   {

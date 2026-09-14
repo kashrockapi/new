@@ -41,7 +41,7 @@ export default function PrizePicksApiPage() {
         <p>
           Comparing books? See the{" "}
           <a href="/esports-odds-api" className="text-white underline">
-            esports odds API
+            Esports Odds API
           </a>
           . Building a slip tool? The{" "}
           <a href="/dfs-esports-api" className="text-white underline">

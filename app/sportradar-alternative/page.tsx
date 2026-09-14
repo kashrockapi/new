@@ -68,7 +68,7 @@ export default function SportradarAlternativePage() {
           </a>
           — or read{" "}
           <a href="/esports-api-pricing" className="text-white underline">
-            esports API pricing
+            Esports API Pricing
           </a>
           .
         </>

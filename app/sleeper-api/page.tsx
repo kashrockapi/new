@@ -45,7 +45,7 @@ export default function SleeperApiPage() {
           </a>{" "}
           for the full board, or compare on the{" "}
           <a href="/esports-odds-api" className="text-white underline">
-            esports odds API
+            Esports Odds API
           </a>
           .
         </p>

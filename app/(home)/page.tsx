@@ -6,6 +6,7 @@ import LandingAuthNav from '@/components/LandingAuthNav';
 import BookMarquee from '@/components/BookMarquee';
 import PricingPlans from '@/components/PricingPlans';
 import { LiveCs2PropsPane } from '@/components/landing/LiveCs2PropsPane';
+import { SiteFooterLinks } from '@/components/seo/SiteFooterLinks';
 import { SportLogoRow } from '@/components/seo/SportLogoRow';
 
 export default function LandingPage() {
@@ -149,7 +150,7 @@ export default function LandingPage() {
               <div className="w-10 h-10 bg-white/5 rounded-sm flex items-center justify-center mb-6 border border-white/10">
                 <i data-lucide="zap" className="w-5 h-5 text-white"></i>
               </div>
-              <h3 className="text-xl font-medium text-white mb-2 tracking-tight">Live scoreboard + Historical</h3>
+                <h3 className="text-xl font-medium text-white mb-2 tracking-tight">Live Scoreboard + Historical</h3>
               <p className="text-base text-zinc-400 leading-relaxed">
                 Live player kills, deaths, and assists updated in under 2 seconds. Plus upcoming, live, and completed matches — box scores and game logs for any date.
               </p>
@@ -265,7 +266,7 @@ export default function LandingPage() {
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500/20 border border-green-500/50"></div>
                     </div>
-                    <div className="ml-4 text-xs font-mono text-zinc-500">GET /v6/esports/cs2/props</div>
+                    <div className="ml-4 text-xs font-mono text-zinc-500">Try me — one live prop, every sport</div>
                   </div>
                   <div className="p-5">
                     <LiveCs2PropsPane />
@@ -362,12 +363,7 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-zinc-600">© 2026 KashRock Inc. All rights reserved.</p>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-              <a href="/build-esports-app" className="text-sm text-zinc-600 hover:text-white transition-colors">Build an esports app</a>
-              <a href="/quickstart" className="text-sm text-zinc-600 hover:text-white transition-colors">Quickstart</a>
-              <a href="/esports-data-api" className="text-sm text-zinc-600 hover:text-white transition-colors">esports API</a>
-              <a href="/mcp" className="text-sm text-zinc-600 hover:text-white transition-colors">esports MCP</a>
-              <a href="/legal" className="text-sm text-zinc-600 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/legal?tab=terms" className="text-sm text-zinc-600 hover:text-white transition-colors">Terms of Service</a>
+              <SiteFooterLinks className="contents" />
               <a href="https://www.instagram.com/kashrockapi/" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-white transition-colors"><i data-lucide="instagram" className="w-5 h-5"></i></a>
             </div>
           </div>

@@ -1,131 +1,42 @@
 "use client"
 
-import { useCallback, useEffect, useState, type ReactNode } from "react"
+import { useCallback, useState } from "react"
 
-import type { DemoCs2PropsResponse } from "@/lib/demo/live-cs2-props"
-
-function JsonLine({ children }: { children: ReactNode }) {
-  return <>{children}{"\n"}</>
-}
-
-function renderSample(data: DemoCs2PropsResponse) {
-  const prop = data.props[0]
-  return (
-    <code>
-      <JsonLine>
-        <span className="text-white">{"{"}</span>
-      </JsonLine>
-      <JsonLine>
-        {"  "}
-        <span className="token-key">&quot;source&quot;</span>:{" "}
-        <span className="token-string">&quot;{data.source}&quot;</span>,
-      </JsonLine>
-      <JsonLine>
-        {"  "}
-        <span className="token-key">&quot;sport&quot;</span>:{" "}
-        <span className="token-string">&quot;{data.sport}&quot;</span>,
-      </JsonLine>
-      <JsonLine>
-        {"  "}
-        <span className="token-key">&quot;props&quot;</span>:{" "}
-        <span className="text-white">[</span>
-      </JsonLine>
-      <JsonLine>
-        {"    "}
-        <span className="text-white">{"{"}</span>
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;propId&quot;</span>:{" "}
-        <span className="token-string">&quot;{prop.propId}&quot;</span>,
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;player_name&quot;</span>:{" "}
-        <span className="token-string">&quot;{prop.player_name}&quot;</span>,
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;stat_type&quot;</span>:{" "}
-        <span className="token-string">&quot;{prop.stat_type}&quot;</span>,
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;line&quot;</span>:{" "}
-        <span className="token-number">{prop.line}</span>,
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;odds&quot;</span>:{" "}
-        <span className="token-number">
-          {prop.odds === null ? "null" : prop.odds}
-        </span>
-        ,
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;direction&quot;</span>:{" "}
-        <span className="token-string">&quot;{prop.direction}&quot;</span>,
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;team&quot;</span>:{" "}
-        <span className="token-string">&quot;{prop.team}&quot;</span>,
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;book_name&quot;</span>:{" "}
-        <span className="token-string">&quot;{prop.book_name}&quot;</span>,
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;event_time&quot;</span>:{" "}
-        <span className="token-string">&quot;{prop.event_time}&quot;</span>,
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="token-key">&quot;links&quot;</span>:{" "}
-        <span className="text-white">{"{"}</span>
-      </JsonLine>
-      <JsonLine>
-        {"        "}
-        <span className="token-key">&quot;market&quot;</span>:{" "}
-        <span className="token-string">&quot;{prop.links.market}&quot;</span>
-      </JsonLine>
-      <JsonLine>
-        {"      "}
-        <span className="text-white">{"}"}</span>
-      </JsonLine>
-      <JsonLine>
-        {"    "}
-        <span className="text-white">{"}"}</span>
-      </JsonLine>
-      <JsonLine>
-        {"  "}
-        <span className="text-white">]</span>
-      </JsonLine>
-      <span className="text-white">{"}"}</span>
-    </code>
-  )
-}
+import { TryMePropJson } from "@/components/landing/TryMePropJson"
+import {
+  DEMO_SPORT_LOGOS,
+  type DemoPropsResponse,
+  type DemoSport,
+} from "@/lib/demo/live-demo-props"
 
 export function LiveCs2PropsPane() {
-  const [data, setData] = useState<DemoCs2PropsResponse | null>(null)
+  const [sport, setSport] = useState<DemoSport>("cs2")
+  const [data, setData] = useState<DemoPropsResponse | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
+
+  const selectSport = (next: DemoSport) => {
+    if (next === sport && data !== null) return
+    setSport(next)
+    setData(null)
+    setError(null)
+  }
 
   const load = useCallback(async () => {
-    setLoading(true)
+    setData(null)
     setError(null)
+    setLoading(true)
     try {
-      const response = await fetch("/api/demo/cs2-props", { cache: "no-store" })
-      const body = (await response.json()) as DemoCs2PropsResponse & {
+      const response = await fetch(`/api/demo/props?sport=${sport}`, {
+        cache: "no-store",
+      })
+      const body = (await response.json()) as DemoPropsResponse & {
         detail?: string
       }
       if (!response.ok) {
         throw new Error(body.detail || `Demo failed (${response.status})`)
       }
-      if (!body.props?.[0]) {
+      if (!Array.isArray(body.props)) {
         throw new Error("No live prop returned")
       }
       setData(body)
@@ -134,29 +45,62 @@ export function LiveCs2PropsPane() {
     } finally {
       setLoading(false)
     }
-  }, [])
+  }, [sport])
 
-  useEffect(() => {
-    void load()
-  }, [load])
+  const currentLogo = DEMO_SPORT_LOGOS.find((l) => l.id === sport)
+  const sportLabel = currentLogo ? currentLogo.alt : sport.toUpperCase()
 
   return (
-    <button
-      type="button"
-      onClick={() => void load()}
-      className="block w-full text-left cursor-pointer"
-      title="Click to refresh live CS2 player props"
-      aria-label="Refresh live CS2 props sample"
-    >
+    <div>
+      <div className="flex flex-wrap items-center gap-2 mb-4">
+        {DEMO_SPORT_LOGOS.map((logo) => (
+          <button
+            key={logo.id}
+            type="button"
+            onClick={() => selectSport(logo.id)}
+            title={logo.alt}
+            aria-label={logo.alt}
+            aria-pressed={sport === logo.id}
+            className={`h-9 px-3 flex items-center justify-center rounded-sm border transition-colors ${
+              sport === logo.id
+                ? "border-white/40 bg-white/10"
+                : "border-white/10 hover:border-white/25"
+            }`}
+          >
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className={`h-4 w-auto max-w-[64px] object-contain ${
+                logo.invert ? "invert" : ""
+              } ${sport === logo.id ? "opacity-100" : "opacity-55"}`}
+            />
+          </button>
+        ))}
+      </div>
+      <p className="font-mono text-[11px] text-zinc-500 mb-3">
+        GET /v6/esports/{sport}/props
+      </p>
       <pre className="font-mono text-xs leading-normal min-h-[220px]">
-        {loading && !data ? (
-          <code className="text-zinc-500">{"// loading live CS2 props…"}</code>
-        ) : error && !data ? (
+        {loading ? (
+          <code className="text-zinc-500">{`// loading live ${sportLabel} prop…`}</code>
+        ) : error ? (
           <code className="text-red-300">{`// ${error}`}</code>
         ) : data ? (
-          renderSample(data)
-        ) : null}
+          <TryMePropJson data={data} />
+        ) : (
+          <code className="text-zinc-500">
+            {`// one live prop. no signup.\n// press Try me`}
+          </code>
+        )}
       </pre>
-    </button>
+      <button
+        type="button"
+        onClick={() => void load()}
+        disabled={loading}
+        className="mt-4 px-4 py-2 text-sm font-medium text-black bg-white hover:bg-zinc-200 disabled:opacity-60 rounded-sm"
+      >
+        Try me
+      </button>
+    </div>
   )
 }

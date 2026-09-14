@@ -141,7 +141,7 @@ export default function LinesPage() {
     <DocsShell active="lines">
       <h1 className="text-4xl font-semibold text-white mb-4 tracking-tight">Lines</h1>
       <p className="text-lg text-zinc-400 mb-8">
-        Cross-venue consensus for match/map mainlines. Thunderpick sportsbook + Kalshi + Polymarket prediction markets.
+        Cross-venue consensus for match/map mainlines across sportsbooks (Bovada, Thunderpick, Cloudbet, BetRivers) + Kalshi + Polymarket prediction markets.
         De-vig, weighted fair probability, and gated edges.
       </p>
       <Route path="/v6/esports/{sport}/lines" />

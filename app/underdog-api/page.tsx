@@ -40,7 +40,7 @@ export default function UnderdogApiPage() {
         <p>
           Compare across books on the{" "}
           <a href="/esports-odds-api" className="text-white underline">
-            esports odds API
+            Esports Odds API
           </a>
           , or see the{" "}
           <a href="/prizepicks-api" className="text-white underline">

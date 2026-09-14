@@ -153,7 +153,7 @@ export const CS2_MATCH_HISTORY_REF: SportRefContent = {
   ],
   relatedLinks: [
     { href: "/cs2-api", label: "CS2 API" },
-    { href: "/historical-esports-data-api", label: "Historical esports data" },
+    { href: "/historical-esports-data-api", label: "Historical Esports Data" },
     { href: "/cs2-props-api", label: "CS2 props API" },
     { href: "/docs/endpoints/history", label: "History docs" },
   ],

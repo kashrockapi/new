@@ -127,8 +127,8 @@ export const CS2_REF: SportRefContent = {
   ],
   relatedLinks: [
     { href: "/cs2-props-api", label: "CS2 player props API" },
-    { href: "/esports-odds-api", label: "Esports odds API" },
-    { href: "/historical-esports-data-api", label: "Historical esports data" },
+    { href: "/esports-odds-api", label: "Esports Odds API" },
+    { href: "/historical-esports-data-api", label: "Historical Esports Data" },
     { href: "/quickstart", label: "Quickstart" },
   ],
   sections: {

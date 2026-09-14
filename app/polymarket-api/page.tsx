@@ -41,7 +41,7 @@ export default function PolymarketApiPage() {
         <p>
           Consensus product:{" "}
           <a href="/esports-consensus-api" className="text-white underline">
-            esports consensus API
+            Esports Consensus API
           </a>
           . Pair with{" "}
           <a href="/kalshi-api" className="text-white underline">
@@ -53,7 +53,7 @@ export default function PolymarketApiPage() {
           </a>
           . Odds hub:{" "}
           <a href="/esports-odds-api" className="text-white underline">
-            esports odds API
+            Esports Odds API
           </a>
           .
         </p>

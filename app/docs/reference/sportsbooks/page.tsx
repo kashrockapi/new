@@ -32,9 +32,9 @@ const GROUPS: { title: string; blurb: string; ids: string[] }[] = [
     ids: ['prizepicks', 'underdog', 'dabble', 'sleeper', 'betr', 'boom', 'pick6', 'parlayplay'],
   },
   {
-    title: 'Sportsbook',
-    blurb: 'Match/map mainlines and player props where listed.',
-    ids: ['thunderpick'],
+    title: 'Sportsbooks',
+    blurb: 'Match/map mainlines, spreads, totals, and player props where listed.',
+    ids: ['thunderpick', 'cloudbet', 'betrivers', 'pinnacle', 'bovada'],
   },
   {
     title: 'Prediction markets',

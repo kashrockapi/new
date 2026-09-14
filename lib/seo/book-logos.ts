@@ -8,6 +8,10 @@ export const BOOK_LOGOS = [
   { name: "Pick6", src: "/logos/pick6.png" },
   { name: "ParlayPlay", src: "/logos/parlayplay.png" },
   { name: "Thunderpick", src: "/logos/thunderpick.png" },
+  { name: "Cloudbet", src: "/logos/cloudbet.png" },
+  { name: "BetRivers", src: "/logos/betrivers.png" },
+  { name: "Pinnacle", src: "/logos/pinnacle.png" },
+  { name: "Bovada", src: "/logos/bovada.png" },
   { name: "Kalshi", src: "/logos/kalshi.png" },
   { name: "Polymarket", src: "/logos/polymarket.png" },
 ] as const

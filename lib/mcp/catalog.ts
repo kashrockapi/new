@@ -58,6 +58,18 @@ export const MCP_TOOLS: McpTool[] = [
   },
   { id: "get_live_frame", when: "Raw live NormalizedFrame + metadata for one game_id.", tier: "builder", group: "schedule" },
   { id: "get_live_events", when: "Derived live events (kills, etc.) for one game_id.", tier: "builder", group: "schedule" },
+  {
+    id: "get_live_odds",
+    when: "Shifting betting odds (live & prematch) and market prices across sportsbooks.",
+    tier: "builder",
+    group: "schedule",
+  },
+  {
+    id: "get_live_odds_history",
+    when: "Audit log of odds movements, price cuts, and line shifts for a match.",
+    tier: "builder",
+    group: "schedule",
+  },
   { id: "get_gamelogs", when: "Per-map player history for grading.", tier: "builder", group: "schedule" },
   {
     id: "get_boxscore",
@@ -67,7 +79,7 @@ export const MCP_TOOLS: McpTool[] = [
   },
   {
     id: "get_match_prep",
-    when: "CS2 team stats, map pool, form, H2H for a match.",
+    when: "CS2 & R6 team stats, map pool/biases, key player matchups, betting insights.",
     tier: "builder",
     group: "schedule",
   },
@@ -79,7 +91,7 @@ export const MCP_TOOLS: McpTool[] = [
   },
   {
     id: "get_tournament_maps",
-    when: "CS2 tournament map picks/bans + side winrates.",
+    when: "CS2 tournament maps for a KashRock match slug / kr_match_id.",
     tier: "builder",
     group: "schedule",
   },

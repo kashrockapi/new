@@ -147,11 +147,11 @@ export default function BuildEsportsAppPage() {
         <p className="text-base text-zinc-400 leading-relaxed">
           Start on the{" "}
           <a href="/quickstart" className="text-white underline">
-            quickstart
+            Quickstart
           </a>
           , then go deep on the{" "}
           <a href="/esports-data-api" className="text-white underline">
-            esports API
+            Esports API
           </a>{" "}
           or{" "}
           <a href="/dfs-esports-api" className="text-white underline">

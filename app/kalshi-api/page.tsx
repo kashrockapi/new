@@ -37,7 +37,7 @@ export default function KalshiApiPage() {
         <p>
           Consensus product:{" "}
           <a href="/esports-consensus-api" className="text-white underline">
-            esports consensus API
+            Esports Consensus API
           </a>
           . Also:{" "}
           <a href="/polymarket-api" className="text-white underline">

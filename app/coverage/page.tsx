@@ -118,11 +118,11 @@ export default function CoveragePage() {
         <p className="text-base text-zinc-400 mt-10">
           Start on the{" "}
           <a href="/esports-data-api" className="text-white underline">
-            esports API
+            Esports API
           </a>
           , the{" "}
           <a href="/historical-esports-data-api" className="text-white underline">
-            historical esports data
+            Historical Esports Data
           </a>
           , or the{" "}
           <a href="/dfs-esports-api" className="text-white underline">

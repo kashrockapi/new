@@ -134,11 +134,11 @@ export default function EsportsApiPricingPage() {
           <p className="mt-6">
             Also see the{" "}
             <a href="/esports-api-free-tier" className="text-white underline">
-              esports API free tier
+              Esports API Free Tier
             </a>{" "}
             page, the{" "}
             <a href="/esports-data-api" className="text-white underline">
-              esports API
+              Esports API
             </a>
             , or jump to{" "}
             <a href="/quickstart" className="text-white underline">

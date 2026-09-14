@@ -87,7 +87,7 @@ export const VAL_REF: SportRefContent = {
   ],
   relatedLinks: [
     { href: "/cs2-api", label: "CS2 API" },
-    { href: "/esports-odds-api", label: "Esports odds API" },
+    { href: "/esports-odds-api", label: "Esports Odds API" },
     { href: "/esports-consensus-api", label: "Consensus lines" },
     { href: "/esports-api-pricing", label: "Pricing" },
   ],

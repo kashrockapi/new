@@ -21,6 +21,10 @@ export const BOOKS = [
   { id: 'pick6', name: 'Pick6' },
   { id: 'parlayplay', name: 'ParlayPlay' },
   { id: 'thunderpick', name: 'Thunderpick' },
+  { id: 'cloudbet', name: 'Cloudbet' },
+  { id: 'betrivers', name: 'BetRivers' },
+  { id: 'pinnacle', name: 'Pinnacle' },
+  { id: 'bovada', name: 'Bovada' },
   { id: 'kalshi', name: 'Kalshi' },
   { id: 'polymarket', name: 'Polymarket' },
 ] as const

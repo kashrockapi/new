@@ -7,7 +7,7 @@ export function EsportsApiLink({
 }: EsportsApiLinkProps) {
   return (
     <a href="/esports-data-api" className={className}>
-      esports API
+      Esports API
     </a>
   )
 }

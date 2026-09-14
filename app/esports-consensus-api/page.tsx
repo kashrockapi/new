@@ -189,11 +189,11 @@ export default function EsportsConsensusApiPage() {
           </a>
           . Cross-book props:{" "}
           <a href="/esports-odds-api" className="text-white underline">
-            esports odds API
+            Esports Odds API
           </a>
           . Full product:{" "}
           <a href="/esports-data-api" className="text-white underline">
-            esports API
+            Esports API
           </a>
           . Field reference:{" "}
           <a href="/docs/endpoints/lines" className="text-white underline">
