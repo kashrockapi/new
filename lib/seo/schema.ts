@@ -74,6 +74,23 @@ export function mcpJsonLd() {
   ]
 }
 
+export function howToLd(opts: {
+  name: string
+  steps: readonly { title: string; body: string }[]
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: opts.name,
+    step: opts.steps.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step.title,
+      text: step.body,
+    })),
+  }
+}
+
 export function appFaqGraphLd(name: string, faqs: readonly Faq[]) {
   return {
     "@context": "https://schema.org",

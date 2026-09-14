@@ -10,7 +10,14 @@ export function CompareTable({ headers, rows }: CompareTableProps) {
         <thead>
           <tr className="border-b border-white/10">
             {headers.map((header, i) => (
-              <th key={i} className="px-6 py-4 font-medium text-white">
+              <th
+                key={i}
+                className={
+                  i === headers.length - 1 && i > 0
+                    ? "px-6 py-4 font-medium text-white bg-white/[0.04]"
+                    : "px-6 py-4 font-medium text-white"
+                }
+              >
                 {header || "\u00a0"}
               </th>
             ))}
@@ -22,7 +29,13 @@ export function CompareTable({ headers, rows }: CompareTableProps) {
               {row.map((cell, i) => (
                 <td
                   key={`${row[0]}-${i}`}
-                  className={i === 0 ? "px-6 py-4 text-white font-medium" : "px-6 py-4 text-zinc-400"}
+                  className={
+                    i === 0
+                      ? "px-6 py-4 text-white font-medium"
+                      : i === row.length - 1
+                        ? "px-6 py-4 text-zinc-200 bg-white/[0.04]"
+                        : "px-6 py-4 text-zinc-400"
+                  }
                 >
                   {cell}
                 </td>

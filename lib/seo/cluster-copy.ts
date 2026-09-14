@@ -71,58 +71,45 @@ export const ODDS_FAQS = [
 export const ABIOS_FAQS = [
   {
     q: "Is KashRock cheaper than Abios?",
-    a: "KashRock publishes flat pricing: a free Sandbox tier and paid plans from $29/mo. Abios (now part of Kambi) is quote-based and enterprise-gated, typically reached through a sales process.",
+    a: "KashRock publishes the number: Sandbox is free, then $29 / $99 / $249 a month. Abios (Kambi) has no public rate card — you contact sales, and they review region before signing.",
   },
   {
     q: "Do I have to talk to sales to get started?",
-    a: "No. You create an API key instantly and hit the sandbox in about a minute — no vetting call, no procurement form.",
+    a: "No. Create an API key instantly and hit Sandbox in about a minute — no vetting call, no procurement form.",
   },
   {
-    q: "What does KashRock cover that a data-only feed doesn't?",
-    a: "DFS-book props from PrizePicks, Underdog, Betr, and Sleeper on the same schema as match and player data, plus outcome verification — useful for pick'em tools, optimizers, and bet trackers.",
+    q: "How do I migrate from Abios Atlas?",
+    a: "Swap Abios-Secret for X-API-Key. GET /v3/series becomes GET /v6/esports/{sport}/matches. Keep the old series id next to kr_match_id. Add /props for DFS books.",
+  },
+  {
+    q: "What does KashRock cover that a sportsbook feed doesn't?",
+    a: "DFS-book props from PrizePicks, Underdog, Betr, Sleeper, Dabble, Boom, Pick6, and ParlayPlay on the same schema as matches, plus hit/miss/push grades.",
   },
   {
     q: "Is KashRock a good fit for a small team or solo developer?",
-    a: "Yes. It's built for indie developers and small tools that can't justify an enterprise contract — start free, scale to $249/mo without renegotiating.",
+    a: "Yes. Start free, scale to $249/mo without renegotiating an enterprise contract.",
   },
 ] as const
 
 export const PANDASCORE_FAQS = [
   {
     q: "Can I use KashRock for betting or DFS tools?",
-    a: "Yes. KashRock is built for props, lines, and pick'em/optimizer use cases. PandaScore restricts its stats plans to non-betting usage, which blocks many indie DFS and model builds.",
+    a: "Yes. KashRock is built for props, lines, and pick'em tools. PandaScore stats plans are not permitted for betting-related usage — you have to talk to sales for a tailored plan.",
   },
   {
     q: "How does pricing compare?",
-    a: "KashRock publishes flat plans from a free Sandbox tier up to $249/mo. PandaScore's paid data plans are priced per videogame per month and scale up quickly for multi-title coverage.",
+    a: "PandaScore historical stats start at 400€ per videogame per month (1,600€ for four titles). Live starts at 1,000€ per game. KashRock is flat: free Sandbox, then $29/mo for all titles.",
+  },
+  {
+    q: "How do I migrate from PandaScore?",
+    a: "Replace ?token= with an X-API-Key header. GET /csgo/matches/upcoming becomes GET /v6/esports/cs2/matches?status=upcoming. Then call /props for the DFS board PandaScore stats plans do not give you.",
   },
   {
     q: "Which DFS books are included?",
-    a: "PrizePicks, Underdog, Betr, Sleeper, Dabble, Boom, Pick6, and ParlayPlay — normalized on one propId across CS2, Valorant, LoL, Dota 2, COD, R6, MLBB, and Deadlock.",
+    a: "PrizePicks, Underdog, Betr, Sleeper, Dabble, Boom, Pick6, and ParlayPlay — one propId across CS2, Valorant, LoL, Dota 2, COD, R6, MLBB, and Deadlock.",
   },
   {
     q: "Do I get a free tier without a betting-use restriction?",
     a: "Yes. Sandbox is $0/mo with an instant key and no non-betting-use clause blocking DFS or props tools.",
   },
 ] as const
-
-export const ABIOS_COMPARE = {
-  headers: ["", "Abios / Kambi", "KashRock"],
-  rows: [
-    ["Pricing", "Quote-based, enterprise-gated", "Published: free tier, then $29+/mo"],
-    ["Onboarding", "Sales call + vetting", "Instant key, sandbox in ~60s"],
-    ["DFS-book props", "Not the focus", "PrizePicks, Underdog, Betr, Sleeper"],
-    ["Outcome verification", "Build your own", "Hit/miss/push built in"],
-    ["Best fit", "Large sportsbooks", "Indie devs, small tools, models"],
-  ],
-} as const
-
-export const PANDASCORE_COMPARE = {
-  headers: ["", "PandaScore", "KashRock"],
-  rows: [
-    ["Betting / DFS use", "Restricted on stats plans", "Built for it"],
-    ["Pricing", "Per game, per month; scales up", "Flat: free tier, then $29+/mo"],
-    ["DFS-book props", "Limited", "PrizePicks, Underdog, Betr, Sleeper"],
-    ["Onboarding", "Account + plan config", "Instant key, sandbox in ~60s"],
-  ],
-} as const

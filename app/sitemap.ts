@@ -76,7 +76,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ? 0.9
           : path === "/pricing" ||
             path === "/build-esports-app" ||
-            path === "/quickstart"
+            path === "/quickstart" ||
+            path === "/abios-alternative" ||
+            path === "/pandascore-alternative"
           ? 0.9
           : 0.8,
   }))
