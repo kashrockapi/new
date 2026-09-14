@@ -79,7 +79,7 @@ export const MCP_TOOLS: McpTool[] = [
   },
   {
     id: "get_match_prep",
-    when: "CS2 & R6 team stats, map pool/biases, key player matchups, betting insights.",
+    when: "CS2, R6 & COD team stats, mode winrates, map pool/biases, key player matchups, betting insights.",
     tier: "builder",
     group: "schedule",
   },

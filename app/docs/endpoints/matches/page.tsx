@@ -92,9 +92,9 @@ export default function MatchesPage() {
       <Curl path="/v6/esports/cs2/fixtures" />
       <JsonBlock title="200 · live" data={FIXTURE} />
 
-      <h2 className="text-xl font-semibold text-white mb-4">Match prep (CS2 &amp; R6)</h2>
+      <h2 className="text-xl font-semibold text-white mb-4">Match prep (CS2, R6 &amp; COD)</h2>
       <p className="text-zinc-400 mb-4">
-        Team stats, map pool/biases, form, key player matchups, and betting insights for CS2 and R6. Pass a KashRock{' '}
+        Team stats, mode winrates, map pool/biases, form, key player matchups, and betting insights for CS2, R6, and COD. Pass a KashRock{' '}
         <code className="text-zinc-300">-vs-</code> slug or <code className="text-zinc-300">kr_match_id</code> from
         match lists — never a provider numeric id.
       </p>
