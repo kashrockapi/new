@@ -100,11 +100,11 @@ export default function QuickstartPage() {
             2. Make the call
           </h2>
           <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-4">{`# python
-pip install git+https://github.com/ovitalszn-cyber/kashrock-python.git
+pip install kashrock
 from kashrock import KashRock
 print(KashRock("YOUR_KEY").props("cs2")["props"][0])`}</pre>
           <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-4">{`# javascript
-npm install github:ovitalszn-cyber/kashrock-js
+npm install kashrock
 import { KashRock } from "kashrock"
 console.log((await new KashRock("YOUR_KEY").props("cs2")).props[0])`}</pre>
           <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-10">{`# curl
