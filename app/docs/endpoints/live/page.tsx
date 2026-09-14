@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock, Params, Route } from '@/components/docs/Code'
+
+
+export const metadata: Metadata = {
+  title: 'Live endpoint',
+  description: 'GET live matches and live boxscore frames.',
+  alternates: selfAlternates('/docs/endpoints/live'),
+}
 
 const GAMES = {
   sport: 'cs2',

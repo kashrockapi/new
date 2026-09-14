@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock, Params, Route } from '@/components/docs/Code'
+
+
+export const metadata: Metadata = {
+  title: 'Rankings endpoint',
+  description: 'GET rankings — team and player rankings.',
+  alternates: selfAlternates('/docs/endpoints/rankings'),
+}
 
 const SAMPLE = {
   source: 'kashrock',

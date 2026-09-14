@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import { DocsShell } from '@/components/docs/DocsShell'
 import esportsMarkets from '../../../data/esports_markets.json'
+
+
+export const metadata: Metadata = {
+  title: 'Markets',
+  description: 'KashRock market and stat_type reference for esports props and lines.',
+  alternates: selfAlternates('/docs/markets'),
+}
 
 const LINE_MARKETS = [
   {

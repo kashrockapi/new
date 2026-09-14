@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock, Params, Route } from '@/components/docs/Code'
+
+
+export const metadata: Metadata = {
+  title: 'Matches endpoint',
+  description: 'GET matches — upcoming, live, and finished fixtures.',
+  alternates: selfAlternates('/docs/endpoints/matches'),
+}
 
 const MATCH = {
   source: 'kashrock',

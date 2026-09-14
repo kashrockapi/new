@@ -1,6 +1,15 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import Link from 'next/link'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock, Params, Route } from '@/components/docs/Code'
+
+
+export const metadata: Metadata = {
+  title: 'Players endpoint',
+  description: 'GET players — search and player profiles.',
+  alternates: selfAlternates('/docs/endpoints/players'),
+}
 
 const SEARCH = {
   source: 'kashrock',

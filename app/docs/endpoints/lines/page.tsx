@@ -1,7 +1,16 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import Link from 'next/link'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock, Params, Route } from '@/components/docs/Code'
 import { API_BASE } from '@/lib/docs'
+
+
+export const metadata: Metadata = {
+  title: 'Lines endpoint',
+  description: 'GET lines — consensus team main lines across books and prediction markets.',
+  alternates: selfAlternates('/docs/endpoints/lines'),
+}
 
 const SAMPLE = {
   source: 'kashrock',

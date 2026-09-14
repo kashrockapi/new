@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock, Params, Route } from '@/components/docs/Code'
+
+
+export const metadata: Metadata = {
+  title: 'History endpoint',
+  description: 'GET history — historical props and gamelog tape.',
+  alternates: selfAlternates('/docs/endpoints/history'),
+}
 
 const SAMPLE = {
   prop_id: 'kr_prop_90f5d48848af',

@@ -32,13 +32,11 @@ export const metadata: Metadata = {
     template: "%s | KashRock",
   },
   description: HOME_DESCRIPTION,
-  alternates: {
-    canonical: "https://www.kashrock.com/",
-  },
+  // Do not set a sitewide canonical here — it made /docs, /blog, /legal, etc.
+  // collapse to the homepage in Google. Each route owns its own canonical.
   openGraph: {
     title: HOME_TITLE,
     description: HOME_DESCRIPTION,
-    url: "https://www.kashrock.com/",
     siteName: "KashRock",
     type: "website",
   },

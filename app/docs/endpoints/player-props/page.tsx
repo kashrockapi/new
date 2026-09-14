@@ -1,6 +1,15 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import Link from 'next/link'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock, Params, Route } from '@/components/docs/Code'
+
+
+export const metadata: Metadata = {
+  title: 'Player props endpoint',
+  description: 'GET player-props — DFS and sportsbook named-player props.',
+  alternates: selfAlternates('/docs/endpoints/player-props'),
+}
 
 const SAMPLE = {
   source: 'kashrock',

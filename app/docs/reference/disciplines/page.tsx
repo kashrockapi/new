@@ -1,6 +1,15 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl } from '@/components/docs/Code'
 import { SPORTS } from '@/lib/docs'
+
+
+export const metadata: Metadata = {
+  title: 'Disciplines',
+  description: 'KashRock esports disciplines and sport keys.',
+  alternates: selfAlternates('/docs/reference/disciplines'),
+}
 
 export default function SportsPage() {
   return (

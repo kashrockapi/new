@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock, Params, Route } from '@/components/docs/Code'
+
+
+export const metadata: Metadata = {
+  title: 'Results endpoint',
+  description: 'GET results — settled prop grades and outcomes.',
+  alternates: selfAlternates('/docs/endpoints/results'),
+}
 
 const SAMPLE = {
   propId: 'kr_prop_1edea6434599',

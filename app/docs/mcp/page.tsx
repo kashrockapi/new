@@ -10,11 +10,12 @@ import {
   type McpTool,
 } from "@/lib/mcp/catalog"
 import { MCP_SNIPPET } from "@/lib/seo/copy"
+import { selfAlternates } from "@/lib/seo/site"
 
 export const metadata: Metadata = {
-  title: "MCP | KashRock Docs",
-  description:
-    "KashRock MCP for Cursor and Claude: uvx kashrock-mcp, Google login, full tier-scoped tool catalog.",
+  title: 'MCP',
+  description: 'KashRock MCP for Cursor and Claude: install, login, and tier-scoped tools.',
+  alternates: selfAlternates('/docs/mcp'),
 }
 
 const GROUPS: McpTool["group"][] = ["session", "board", "players", "schedule"]

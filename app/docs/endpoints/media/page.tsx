@@ -1,6 +1,15 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import Link from 'next/link'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock, Params, Route } from '@/components/docs/Code'
+
+
+export const metadata: Metadata = {
+  title: 'Media endpoint',
+  description: 'GET media — player faces and team logos by name or id.',
+  alternates: selfAlternates('/docs/endpoints/media'),
+}
 
 const SAMPLE = {
   source: 'kashrock',

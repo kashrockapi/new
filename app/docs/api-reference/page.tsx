@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { API_BASE } from '@/lib/docs'
+
+
+export const metadata: Metadata = {
+  title: 'API reference',
+  description: 'KashRock HTTP API reference — props, lines, gaps, matches, results, and research endpoints.',
+  alternates: selfAlternates('/docs/api-reference'),
+}
 
 /** Public DaaS surface only — stacks / internal admin omitted on purpose. */
 const ROUTES: { path: string; note: string }[] = [

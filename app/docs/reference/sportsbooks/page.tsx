@@ -1,8 +1,17 @@
+import type { Metadata } from 'next'
+import { selfAlternates } from '@/lib/seo/site'
 import Link from 'next/link'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock } from '@/components/docs/Code'
 import { BOOKS } from '@/lib/docs'
 import { BOOK_LOGOS } from '@/lib/seo/book-logos'
+
+
+export const metadata: Metadata = {
+  title: 'Sportsbooks',
+  description: 'KashRock sportsbook and DFS book reference.',
+  alternates: selfAlternates('/docs/reference/sportsbooks'),
+}
 
 const SAMPLE = {
   source: 'kashrock',

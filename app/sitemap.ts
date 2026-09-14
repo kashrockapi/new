@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/polymarket-api",
     "/coverage",
     "/historical-esports-data-api",
+    "/blog",
     "/blog/how-to-get-prizepicks-props-api",
     "/blog/cs2-player-props-without-scraping",
     "/blog/build-esports-props-app-in-a-weekend",
@@ -44,22 +45,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/sportradar-alternative",
     "/grid-alternative",
     "/mcp",
+    "/legal",
     "/docs",
     "/docs/api-reference",
     "/docs/markets",
+    "/docs/mcp",
     "/docs/reference/sportsbooks",
+    "/docs/reference/disciplines",
     "/docs/endpoints/props",
     "/docs/endpoints/player-props",
     "/docs/endpoints/media",
     "/docs/endpoints/gaps",
     "/docs/endpoints/lines",
     "/docs/endpoints/matches",
+    "/docs/endpoints/live",
     "/docs/endpoints/players",
     "/docs/endpoints/rankings",
     "/docs/endpoints/results",
     "/docs/endpoints/research",
     "/docs/endpoints/history",
-    "/console",
   ]
   return routes.map((path) => ({
     url: path === "/" ? base : `${base}${path}`,
@@ -72,8 +76,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             path === "/build-esports-app" ||
             path === "/quickstart"
           ? 0.9
-          : path === "/console"
-            ? 0.7
-            : 0.8,
+          : 0.8,
   }))
 }

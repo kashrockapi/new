@@ -3,10 +3,12 @@ import Link from 'next/link'
 import { DocsShell } from '@/components/docs/DocsShell'
 import { Curl, JsonBlock } from '@/components/docs/Code'
 import { API_BASE, SPORTS } from '@/lib/docs'
+import { selfAlternates } from '@/lib/seo/site'
 
 export const metadata: Metadata = {
-  title: 'API Documentation | KashRock',
-  description: 'KashRock esports DaaS: live props, consensus lines (Thunderpick + Kalshi + Polymarket), fixtures, settlements, and player research.',
+  title: 'API Documentation',
+  description: 'KashRock esports DaaS: live props, consensus lines, fixtures, settlements, and player research.',
+  alternates: selfAlternates('/docs'),
 }
 
 const PROP_SAMPLE = {
