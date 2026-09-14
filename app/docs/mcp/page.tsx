@@ -78,7 +78,7 @@ export default function DocsMcpPage() {
           <li>
             <span className="text-white">Builder+</span> — matches, live player kills/deaths/assists
             under 2s, <code className="text-zinc-300">get_live_boxscore</code>, gamelogs, finished
-            boxscores, CS2 prep / player-board / tournament maps, results, history tape
+            boxscores, match prep (CS2/R6/COD/Valorant/Apex) / player-board / tournament maps, results, history tape
           </li>
         </ul>
         <p className="text-sm text-zinc-500">

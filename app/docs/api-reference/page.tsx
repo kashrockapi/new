@@ -50,7 +50,7 @@ const ROUTES: { path: string; note: string }[] = [
   { path: 'GET /v6/esports/{sport}/players/{id}/stats', note: 'Canonical player stats (KPR and related).' },
   { path: 'GET /v6/esports/{sport}/players/{slug}/gamelogs', note: 'Recent map stats. Builder plan.' },
   { path: 'GET /v6/esports/{sport}/teams/h2h', note: 'Vault finished team-vs-team meetings (scores + maps).' },
-  { path: 'GET /v6/esports/{sport}/matches/{match_slug}/prep', note: 'Match prep: team stats, mode winrates, map pool/biases, key player matchups, betting insights. CS2, R6 & COD. KashRock slug / kr_match_id only. Builder plan.' },
+  { path: 'GET /v6/esports/{sport}/matches/{match_slug}/prep', note: 'Match prep: team stats, mode winrates, map pool/biases, key player matchups, betting insights. CS2, R6, COD, Valorant & Apex. KashRock slug / kr_match_id only. Builder plan.' },
   { path: 'GET /v6/esports/cs2/matches/{match_slug}/player-board', note: 'CS2 player averages + favourite weapons. KR match ref only. Builder plan.' },
   { path: 'GET /v6/esports/cs2/matches/{match_slug}/tournament-maps', note: 'CS2 tournament map picks/bans + T/CT winrates via match. Builder plan.' },
   { path: 'GET /v6/esports/{sport}/results', note: 'Settled props. Optional grade=. Builder plan.' },
