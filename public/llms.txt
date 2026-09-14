@@ -39,6 +39,10 @@ Books: prizepicks, underdog, dabble, sleeper, betr, boom, pick6, parlayplay, thu
 
 - https://www.kashrock.com/mcp
 - https://www.kashrock.com/docs/mcp
+- https://www.kashrock.com/quickstart
+- https://www.kashrock.com/esports-data-api
+- https://github.com/ovitalszn-cyber/kashrock-python
+- https://github.com/ovitalszn-cyber/kashrock-js
 - https://www.kashrock.com/esports-line-gaps-api
 - https://www.kashrock.com/cs2-api
 - https://www.kashrock.com/prediction-market-api

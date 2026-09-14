@@ -36,7 +36,15 @@ export default function DocsPage() {
         <Link href="/mcp" className="text-white underline">
           esports MCP
         </Link>{" "}
-        in Cursor/Claude so you never hunt endpoints. HTTP stays for power users. Base URL{" "}
+        in Cursor/Claude so you never hunt endpoints. App builders:{" "}
+        <a href="https://github.com/ovitalszn-cyber/kashrock-python" className="text-white underline">
+          Python SDK
+        </a>{" "}
+        or{" "}
+        <a href="https://github.com/ovitalszn-cyber/kashrock-js" className="text-white underline">
+          JS SDK
+        </a>
+        . HTTP stays for power users. Base URL{" "}
         <code className="text-white">{API_BASE}</code>.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

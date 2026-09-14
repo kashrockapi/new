@@ -99,22 +99,17 @@ export default function QuickstartPage() {
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-white mb-4">
             2. Make the call
           </h2>
-          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-4">{`# curl
+          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-4">{`# python
+pip install git+https://github.com/ovitalszn-cyber/kashrock-python.git
+from kashrock import KashRock
+print(KashRock("YOUR_KEY").props("cs2")["props"][0])`}</pre>
+          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-4">{`# javascript
+npm install github:ovitalszn-cyber/kashrock-js
+import { KashRock } from "kashrock"
+console.log((await new KashRock("YOUR_KEY").props("cs2")).props[0])`}</pre>
+          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-10">{`# curl
 curl -H "X-API-Key: YOUR_KEY" \\
   "https://kashrock.up.railway.app/v6/esports/cs2/props"`}</pre>
-          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-4">{`# python
-import requests
-r = requests.get(
-  "https://kashrock.up.railway.app/v6/esports/cs2/props",
-  headers={"X-API-Key": "YOUR_KEY"},
-)
-print(r.json()["props"][0])`}</pre>
-          <pre className="bg-[#0C0D0F] border border-white/10 rounded-sm p-5 font-mono text-xs text-zinc-300 overflow-x-auto mb-10">{`// javascript
-const res = await fetch(
-  "https://kashrock.up.railway.app/v6/esports/cs2/props",
-  { headers: { "X-API-Key": "YOUR_KEY" } }
-);
-const { props } = await res.json();`}</pre>
 
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-white mb-4">
             3. Read the response

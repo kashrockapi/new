@@ -72,6 +72,12 @@ export default function EsportsDataApiPage() {
               <img key={logo.alt} src={logo.src} alt={logo.alt} className={`h-8 w-auto ${logo.invert ? "invert" : ""}`} />
             ))}
           </div>
+          <p className="text-base text-zinc-400 mt-10">
+            Python:{" "}
+            <a href="https://github.com/ovitalszn-cyber/kashrock-python" className="text-white underline">kashrock-python</a>
+            {" "}· JS:{" "}
+            <a href="https://github.com/ovitalszn-cyber/kashrock-js" className="text-white underline">kashrock-js</a>
+          </p>
         </div>
       </section>
       <section className="py-16 max-w-7xl mx-auto px-6">
