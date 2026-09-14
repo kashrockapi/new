@@ -364,7 +364,8 @@ export default function LandingPage() {
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               <a href="/build-esports-app" className="text-sm text-zinc-600 hover:text-white transition-colors">Build an esports app</a>
               <a href="/quickstart" className="text-sm text-zinc-600 hover:text-white transition-colors">Quickstart</a>
-              <a href="/esports-data-api" className="text-sm text-zinc-600 hover:text-white transition-colors">Esports Data API</a>
+              <a href="/esports-data-api" className="text-sm text-zinc-600 hover:text-white transition-colors">esports API</a>
+              <a href="/mcp" className="text-sm text-zinc-600 hover:text-white transition-colors">esports MCP</a>
               <a href="/legal" className="text-sm text-zinc-600 hover:text-white transition-colors">Privacy Policy</a>
               <a href="/legal?tab=terms" className="text-sm text-zinc-600 hover:text-white transition-colors">Terms of Service</a>
               <a href="https://www.instagram.com/kashrockapi/" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-white transition-colors"><i data-lucide="instagram" className="w-5 h-5"></i></a>

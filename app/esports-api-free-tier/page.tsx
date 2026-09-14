@@ -123,7 +123,11 @@ export default function EsportsApiFreeTierPage() {
               <a href="/esports-api-pricing" className="text-white underline">
                 esports API pricing
               </a>{" "}
-              for the full menu, or the{" "}
+              for the full menu, the{" "}
+              <a href="/esports-data-api" className="text-white underline">
+                esports API
+              </a>
+              , or the{" "}
               <a href="/cs2-api" className="text-white underline">
                 CS2 API reference
               </a>{" "}

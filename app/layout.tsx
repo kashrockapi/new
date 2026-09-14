@@ -21,9 +21,9 @@ const dmSans = DM_Sans({
 });
 
 const HOME_TITLE =
-  "Esports Data API — CS2, Valorant, LoL, Dota & More | KashRock"
+  "KashRock — Serious Esports Data Without Enterprise Pricing"
 const HOME_DESCRIPTION =
-  "Affordable esports data API. Normalized props, lines, and stats across CS2, Valorant, LoL, Dota 2, COD, R6, MLBB, and Deadlock — PrizePicks, Underdog, ParlayPlay & more. Instant API key, free tier."
+  "Normalized esports props, lines, matches, and player stats across CS2, Valorant, LoL, Dota 2, and more. Instant key, free sandbox — no enterprise quote."
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kashrock.com"),

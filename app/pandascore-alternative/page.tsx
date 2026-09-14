@@ -64,7 +64,7 @@ export default function PandaScoreAlternativePage() {
         </ul>
         <p className="text-base text-zinc-400 mt-10">
           See the <a href="/dfs-esports-api" className="text-white underline">DFS Esports API</a> for the PrizePicks and Underdog board, or the{" "}
-          <a href="/esports-data-api" className="text-white underline">esports data API</a> pillar for matches and stats.
+          <a href="/esports-data-api" className="text-white underline">esports API</a> pillar for matches and stats.
         </p>
       </section>
       <FaqGrid faqs={PANDASCORE_FAQS} />

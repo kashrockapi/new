@@ -191,6 +191,10 @@ export default function EsportsConsensusApiPage() {
           <a href="/esports-odds-api" className="text-white underline">
             esports odds API
           </a>
+          . Full product:{" "}
+          <a href="/esports-data-api" className="text-white underline">
+            esports API
+          </a>
           . Field reference:{" "}
           <a href="/docs/endpoints/lines" className="text-white underline">
             /docs/endpoints/lines

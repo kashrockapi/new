@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 
+import { EsportsApiLink } from "@/components/seo/EsportsApiLink"
 import { FaqGrid } from "@/components/seo/FaqGrid"
 import { JsonLd } from "@/components/seo/JsonLd"
 import { MarketingShell } from "@/components/seo/MarketingShell"
@@ -141,9 +142,9 @@ export function SportReferencePage({ content }: { content: SportRefContent }) {
 
           <section className="border-t border-white/10 pt-10 mt-8 mb-8">
             <p className="text-base text-zinc-400 leading-relaxed mb-6">
-              If you need a normalized feed instead of another UI wrapper, KashRock exposes live boards,
-              schedules, and history on one schema — with the IDs and outcome patterns that keep
-              backtests and grading honest. Start free on{" "}
+              If you need a normalized feed instead of another UI wrapper, the{" "}
+              <EsportsApiLink /> exposes live boards, schedules, and history on one schema — with
+              the IDs and outcome patterns that keep backtests and grading honest. Start free on{" "}
               <a href="/esports-api-free-tier" className="text-white underline">
                 Sandbox
               </a>
@@ -154,11 +155,14 @@ export function SportReferencePage({ content }: { content: SportRefContent }) {
               .
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-zinc-500">
-              {content.relatedLinks.map((link) => (
-                <a key={link.href} href={link.href} className="hover:text-white transition-colors">
-                  {link.label} →
-                </a>
-              ))}
+              <EsportsApiLink className="hover:text-white transition-colors" />
+              {content.relatedLinks
+                .filter((link) => link.href !== "/esports-data-api")
+                .map((link) => (
+                  <a key={link.href} href={link.href} className="hover:text-white transition-colors">
+                    {link.label} →
+                  </a>
+                ))}
             </div>
           </section>
         </div>

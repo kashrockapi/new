@@ -34,7 +34,7 @@ export default function DocsPage() {
       <p className="text-lg text-zinc-400 leading-relaxed mb-8">
         KashRock is a DaaS for esports books and apps. Prefer the{" "}
         <Link href="/mcp" className="text-white underline">
-          MCP
+          esports MCP
         </Link>{" "}
         in Cursor/Claude so you never hunt endpoints. HTTP stays for power users. Base URL{" "}
         <code className="text-white">{API_BASE}</code>.

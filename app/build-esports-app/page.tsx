@@ -151,7 +151,7 @@ export default function BuildEsportsAppPage() {
           </a>
           , then go deep on the{" "}
           <a href="/esports-data-api" className="text-white underline">
-            esports data API
+            esports API
           </a>{" "}
           or{" "}
           <a href="/dfs-esports-api" className="text-white underline">

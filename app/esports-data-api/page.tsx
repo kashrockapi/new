@@ -7,13 +7,15 @@ import { GAME_LOGOS } from "@/lib/seo/game-logos"
 import { faqPageLd, softwareApplicationLd } from "@/lib/seo/schema"
 
 export const metadata: Metadata = {
-  title: DATA_API_TITLE,
+  title: { absolute: DATA_API_TITLE },
   description: DATA_API_DESCRIPTION,
   alternates: { canonical: "https://www.kashrock.com/esports-data-api" },
   keywords: [
-    "esports data api",
     "esports api",
+    "esports data api",
     "esports stats api",
+    "esports match api",
+    "esports score api",
     "cs2 api",
     "lol esports api",
     "dota 2 api",
@@ -40,7 +42,7 @@ export default function EsportsDataApiPage() {
       <JsonLd
         data={[
           softwareApplicationLd({
-            name: "KashRock Esports Data API",
+            name: "KashRock Esports API",
             url,
             description: DATA_API_DESCRIPTION,
           }),
@@ -51,11 +53,11 @@ export default function EsportsDataApiPage() {
         <div className="absolute inset-0 seo-grid opacity-30 pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-6 leading-[1.1]">
-            Esports Data API.<br />
-            <span className="seo-grad">All 8 titles — props, lines &amp; stats.</span>
+            Esports API.<br />
+            <span className="seo-grad">Props, odds &amp; stats for 8 titles.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-            One affordable esports data API: normalized props, lines, matches, and player stats. Instant key. No enterprise quote.
+            One affordable esports API: normalized props, lines, matches, live scores, and player stats. Instant key. No enterprise quote.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="/pricing" className="w-full sm:w-auto px-8 py-3.5 bg-white text-black text-base font-medium rounded-sm hover:bg-zinc-200">
@@ -74,7 +76,7 @@ export default function EsportsDataApiPage() {
       </section>
       <section className="py-16 max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-10">
-          What the esports data API covers
+          What the esports API covers
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {PILLARS.map((item) => (
@@ -102,8 +104,36 @@ export default function EsportsDataApiPage() {
           <a href="/polymarket-api" className="text-white underline">Polymarket API</a>. Line shopping
           lives on the{" "}
           <a href="/esports-odds-api" className="text-white underline">esports odds API</a>. Full board:{" "}
-          <a href="/dfs-esports-api" className="text-white underline">DFS Esports API</a>. See{" "}
+          <a href="/dfs-esports-api" className="text-white underline">DFS Esports API</a>. Backtests use{" "}
+          <a href="/historical-esports-data-api" className="text-white underline">historical esports data</a>. Use it from Cursor via the{" "}
+          <a href="/mcp" className="text-white underline">esports MCP</a>. See{" "}
           <a href="/coverage" className="text-white underline">coverage</a> for titles and books.
+        </p>
+      </section>
+      <section className="py-16 max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4">
+          Esports Match API
+        </h2>
+        <p className="text-base text-zinc-400 max-w-3xl leading-relaxed">
+          Upcoming, live, and finished fixtures on{" "}
+          <code className="text-white">GET /v6/esports/{"{sport}"}/matches</code>
+          {" "}— status, start time, and stable match IDs, not just a winner flag. Filter by{" "}
+          <code className="text-zinc-300">upcoming</code>, <code className="text-zinc-300">live</code>, or{" "}
+          <code className="text-zinc-300">finished</code>. Field reference:{" "}
+          <a href="/docs/endpoints/matches" className="text-white underline">matches docs</a>.
+        </p>
+      </section>
+      <section className="py-16 max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4">
+          Esports Score API
+        </h2>
+        <p className="text-base text-zinc-400 max-w-3xl leading-relaxed">
+          Live scores and in-game boxscores on{" "}
+          <code className="text-white">GET /v6/esports/{"{sport}"}/live/games</code>
+          {" "}and{" "}
+          <code className="text-white">GET /v6/esports/{"{sport}"}/live/{"{game_id}"}/boxscore</code>
+          {" "}— map score, round clock, and player K/D/A while the map is on. Field reference:{" "}
+          <a href="/docs/endpoints/live" className="text-white underline">live scores docs</a>.
         </p>
       </section>
       <section className="py-24 max-w-7xl mx-auto px-6">

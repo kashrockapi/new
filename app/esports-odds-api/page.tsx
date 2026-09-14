@@ -89,8 +89,8 @@ export default function EsportsOddsApiPage() {
             </p>
             <p className="text-base text-zinc-400 mb-6">
               Want the DFS-book framing? See the <a href="/dfs-esports-api" className="text-white underline">DFS Esports API</a>. Focused on CS2?
-              The <a href="/cs2-props-api" className="text-white underline">CS2 player props API</a>. Everything at once? The{" "}
-              <a href="/esports-data-api" className="text-white underline">esports data API</a> pillar.
+              The <a href="/cs2-props-api" className="text-white underline">CS2 player props API</a>. Everything at once?               The{" "}
+              <a href="/esports-data-api" className="text-white underline">esports API</a> pillar.
             </p>
             <div className="flex flex-col gap-2 text-sm text-zinc-400">
               <a href="/esports-consensus-api" className="hover:text-white">Esports consensus API →</a>

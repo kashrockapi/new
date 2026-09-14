@@ -1,5 +1,5 @@
 export const HISTORICAL_TITLE =
-  "Historical Esports Data API — Quote Tape, Gamelogs & Settled Results | KashRock"
+  "Historical Esports Data — Quote Tape, Gamelogs & Settled Results | KashRock"
 export const HISTORICAL_DESCRIPTION =
   "Stop scraping for historical esports lines. KashRock gives you vault-backed quote tape, player gamelogs, and settled results for CS2, Valorant, LoL, Dota & more — one API key, no enterprise quote."
 

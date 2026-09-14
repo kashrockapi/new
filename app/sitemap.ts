@@ -72,7 +72,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:
       path === "/"
         ? 1
-        : path === "/pricing" ||
+        : path === "/esports-data-api"
+          ? 0.9
+          : path === "/pricing" ||
             path === "/build-esports-app" ||
             path === "/quickstart"
           ? 0.9

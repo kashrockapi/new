@@ -136,7 +136,11 @@ export default function EsportsApiPricingPage() {
             <a href="/esports-api-free-tier" className="text-white underline">
               esports API free tier
             </a>{" "}
-            page, or jump to{" "}
+            page, the{" "}
+            <a href="/esports-data-api" className="text-white underline">
+              esports API
+            </a>
+            , or jump to{" "}
             <a href="/quickstart" className="text-white underline">
               quickstart
             </a>

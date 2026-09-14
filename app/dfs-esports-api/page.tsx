@@ -82,7 +82,8 @@ export default function DfsEsportsApiPage() {
             <p className="text-lg text-zinc-500 mb-6">
               Live PrizePicks CS2 prop from production. Same shape for Underdog and LoL DFS data.
             </p>
-            <div className="flex flex-col gap-2 text-sm text-zinc-400 mb-6">
+            <div className="flex flex-col gap-2 text-sm text-zinc-400">
+              <a href="/esports-data-api" className="hover:text-white">esports API</a>
               <a href="/build-esports-app" className="hover:text-white">Build an esports app →</a>
               <a href="/quickstart" className="hover:text-white">Quickstart (first call in 30 sec) →</a>
               <a href="/prizepicks-api" className="hover:text-white">PrizePicks API →</a>
@@ -99,9 +100,6 @@ export default function DfsEsportsApiPage() {
               <a href="/blog/build-esports-props-app-in-a-weekend" className="hover:text-white">Build a CS2 props app in a weekend →</a>
               <a href="/coverage" className="hover:text-white">Full coverage matrix →</a>
             </div>
-            <a href="/esports-data-api" className="text-sm text-zinc-400 hover:text-white">
-              Need the broader esports data API? →
-            </a>
           </div>
           <div className="flex-1 w-full max-w-2xl">
             <PropCode />

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react"
 
 import { CompareTable } from "@/components/seo/CompareTable"
+import { EsportsApiLink } from "@/components/seo/EsportsApiLink"
 import { FaqGrid } from "@/components/seo/FaqGrid"
 import { JsonLd } from "@/components/seo/JsonLd"
 import { MarketingShell } from "@/components/seo/MarketingShell"
@@ -79,7 +80,9 @@ export function AlternativePage({
             </li>
           ))}
         </ul>
-        <p className="text-base text-zinc-400 mt-10">{related}</p>
+        <p className="text-base text-zinc-400 mt-10">
+          {related} Full product: the <EsportsApiLink />.
+        </p>
       </section>
 
       <FaqGrid faqs={jsonLdFaqs} />

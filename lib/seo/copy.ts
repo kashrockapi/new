@@ -5,10 +5,10 @@ export const DFS_DESCRIPTION =
   "Affordable DFS esports API with an instant key. Pull PrizePicks, Underdog, Betr, Sleeper, Dabble, Boom, Pick6, and ParlayPlay player props across CS2, Valorant, LoL, Dota 2, COD, R6, MLBB, and Deadlock from GET /v6/esports/{sport}/props."
 
 export const DATA_API_TITLE =
-  "Esports Data API — All 8 Titles: Props, Lines & Stats"
+  "Esports API — Props, Odds & Stats for 8 Titles | KashRock"
 
 export const DATA_API_DESCRIPTION =
-  "Esports data API for CS2, Valorant, League of Legends, Dota 2, Call of Duty, Rainbow Six, Mobile Legends, and Deadlock. Normalized DFS props, sportsbook lines, and Kalshi / Polymarket prediction-market mainlines. Free sandbox, then $29+/mo."
+  "Esports API for CS2, Valorant, League of Legends, Dota 2, Call of Duty, Rainbow Six, Mobile Legends, and Deadlock. Normalized DFS props, sportsbook lines, matches, live scores, and Kalshi / Polymarket prediction-market mainlines. Free sandbox, then $29+/mo."
 
 export const DFS_FAQS = [
   {
@@ -31,8 +31,8 @@ export const DFS_FAQS = [
 
 export const DATA_API_FAQS = [
   {
-    q: "What does an esports data API include?",
-    a: "KashRock covers event schedules, player props and lines, match data, player stats, and outcome verification across CS2, Valorant, LoL, Dota 2, COD, R6, MLBB, and Deadlock.",
+    q: "What does an esports API include?",
+    a: "KashRock covers event schedules, player props and lines, match data, live scores, player stats, and outcome verification across CS2, Valorant, LoL, Dota 2, COD, R6, MLBB, and Deadlock.",
   },
   {
     q: "Is there a free esports API tier?",
@@ -56,10 +56,10 @@ export const PLAN_OFFERS = [
 ] as const
 
 export const MCP_TITLE =
-  "KashRock MCP — Use the Esports API from Cursor in 30 Seconds"
+  "Esports MCP — Props, Odds & Stats in Cursor | KashRock"
 
 export const MCP_DESCRIPTION =
-  "Add KashRock to Cursor or Claude in 30 seconds (uvx kashrock-mcp). Google login, then your agent gets the full tier-scoped tool catalog — props, moneylines, consensus lines, research, and Builder history."
+  "Esports MCP for Cursor and Claude. Paste uvx kashrock-mcp, log in with Google, then pull props, moneylines, live scores, and history in plain English. Instant setup."
 
 export const MCP_SNIPPET = `{
   "mcpServers": {
@@ -90,6 +90,10 @@ export const MCP_STEPS = [
 
 export const MCP_FAQS = [
   {
+    q: "What is an esports MCP?",
+    a: "An esports MCP is a Model Context Protocol server that lets Cursor or Claude call live esports props, odds, matches, and scores in plain English. KashRock's esports MCP is uvx kashrock-mcp — Google login, then the tools on your billed plan.",
+  },
+  {
     q: "Do I need to read the API docs?",
     a: "No. Paste the snippet, log in with Google, then ask in plain English. Prefer MCP over hunting HTTP paths. Full tool list lives on /mcp and /docs/mcp.",
   },
@@ -112,5 +116,30 @@ export const MCP_FAQS = [
   {
     q: "Which sports and books?",
     a: "Sports: cs2, valorant, lol, dota2, cod, r6, mlbb, deadlock. Books include PrizePicks, Underdog, ParlayPlay, Betr, Sleeper, Dabble, Boom, Pick6, Thunderpick, Kalshi, and Polymarket. list_books returns the live registry.",
+  },
+] as const
+
+export const MCP_PROMPTS = [
+  "Log in to KashRock, then whoami.",
+  "Show CS2 Kalshi and Polymarket moneylines for tonight.",
+  "Pull PrizePicks and ParlayPlay CS2 kills for Vitality.",
+  "Live in-game KDA for a CS2 match right now.",
+  "ZywOo last 10 maps and grade an Underdog kills prop.",
+  "suggest_build: DFS board + live streams for LoL",
+  "Head-to-head: Vitality vs MOUZ — then live streams.",
+] as const
+
+export const MCP_TIERS = [
+  {
+    plan: "Sandbox",
+    gets: "login, whoami, capabilities, CS2 props + coverage, list_sports / markets",
+  },
+  {
+    plan: "Hobby",
+    gets: "All 8 sports · moneylines · consensus lines · research · rankings · streams · H2H",
+  },
+  {
+    plan: "Builder+",
+    gets: "Matches, live player kills/deaths/assists under 2s, get_live_boxscore, gamelogs, finished boxscores, get_match_prep / get_player_board / get_tournament_maps, results, history tape",
   },
 ] as const

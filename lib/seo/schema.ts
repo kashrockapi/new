@@ -53,14 +53,14 @@ export function mcpJsonLd() {
   const url = "https://www.kashrock.com/mcp"
   return [
     softwareApplicationLd({
-      name: "KashRock MCP",
+      name: "KashRock Esports MCP",
       url,
       description: MCP_DESCRIPTION,
     }),
     {
       "@context": "https://schema.org",
       "@type": "HowTo",
-      name: "Set up KashRock in Cursor in 30 seconds",
+      name: "Set up the KashRock esports MCP in Cursor in 30 seconds",
       totalTime: "PT30S",
       url,
       step: MCP_STEPS.map((step) => ({

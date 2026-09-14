@@ -58,7 +58,7 @@ export default function AbiosAlternativePage() {
           ))}
         </ul>
         <p className="text-base text-zinc-400 mt-10">
-          Start on the <a href="/esports-data-api" className="text-white underline">esports data API</a>, or jump to the{" "}
+          Start on the <a href="/esports-data-api" className="text-white underline">esports API</a>, or jump to the{" "}
           <a href="/dfs-esports-api" className="text-white underline">DFS Esports API</a> for PrizePicks and Underdog boards.
         </p>
       </section>

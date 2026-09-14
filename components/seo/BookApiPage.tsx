@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 
+import { EsportsApiLink } from "@/components/seo/EsportsApiLink"
 import { FaqGrid } from "@/components/seo/FaqGrid"
 import { JsonLd } from "@/components/seo/JsonLd"
 import { MarketingShell } from "@/components/seo/MarketingShell"
@@ -101,7 +102,12 @@ export function BookApiPage({
             <p className="text-lg text-zinc-500 mb-6">
               Live {brand} CS2 prop from production.
             </p>
-            <div className="text-base text-zinc-400 leading-relaxed">{related}</div>
+            <div className="text-base text-zinc-400 leading-relaxed">
+              {related}
+              <p className="mt-4">
+                This book feed is part of the <EsportsApiLink />.
+              </p>
+            </div>
           </div>
           <div className="flex-1 w-full max-w-2xl">
             <PropCode path={samplePath} sample={sample} />

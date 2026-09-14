@@ -14,8 +14,10 @@ import {
 import {
   MCP_DESCRIPTION,
   MCP_FAQS,
+  MCP_PROMPTS,
   MCP_SNIPPET,
   MCP_STEPS,
+  MCP_TIERS,
   MCP_TITLE,
 } from "@/lib/seo/copy"
 import { mcpJsonLd } from "@/lib/seo/schema"
@@ -25,11 +27,13 @@ export const metadata: Metadata = {
   description: MCP_DESCRIPTION,
   alternates: { canonical: "https://www.kashrock.com/mcp" },
   keywords: [
+    "esports mcp",
+    "esports MCP",
+    "dota 2 mcp",
+    "kalshi mcp",
     "kashrock mcp",
     "cursor esports api",
     "claude mcp prizepicks",
-    "esports api cursor",
-    "cs2 props mcp",
     "uvx kashrock-mcp",
   ],
   openGraph: {
@@ -41,31 +45,6 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: MCP_TITLE, description: MCP_DESCRIPTION },
 }
 
-const PROMPTS = [
-  "Log in to KashRock, then whoami.",
-  "Show CS2 Kalshi and Polymarket moneylines for tonight.",
-  "Pull PrizePicks and ParlayPlay CS2 kills for Vitality.",
-  "Live in-game KDA for a CS2 match right now.",
-  "ZywOo last 10 maps and grade an Underdog kills prop.",
-  "suggest_build: DFS board + live streams for LoL",
-  "Head-to-head: Vitality vs MOUZ — then live streams.",
-]
-
-const TIERS = [
-  {
-    plan: "Sandbox",
-    gets: "login, whoami, capabilities, CS2 props + coverage, list_sports / markets",
-  },
-  {
-    plan: "Hobby",
-    gets: "All 8 sports · moneylines · consensus lines · research · rankings · streams · H2H",
-  },
-  {
-    plan: "Builder+",
-    gets: "Matches, live player kills/deaths/assists under 2s, get_live_boxscore, gamelogs, finished boxscores, get_match_prep / get_player_board / get_tournament_maps, results, history tape",
-  },
-]
-
 const GROUPS: McpTool["group"][] = ["session", "board", "players", "schedule"]
 
 export default function McpPage() {
@@ -76,14 +55,13 @@ export default function McpPage() {
         <div className="absolute inset-0 seo-grid opacity-30 pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-6 leading-[1.1]">
-            Ask Cursor.
-            <br />
-            <span className="seo-grad">Don&apos;t read the docs.</span>
+            Esports MCP.<br />
+            <span className="seo-grad">Ask Cursor. Don&apos;t read the docs.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-            Thirty seconds. Paste one snippet. Log in with Google. Your agent gets the full
-            KashRock surface for your plan — props, moneylines, consensus lines, research, and
-            (on Builder) history. Install: <code className="text-white text-base">uvx kashrock-mcp</code>.
+            The esports MCP for Cursor and Claude. Thirty seconds: paste one snippet, log in with
+            Google. Your agent gets props, moneylines, live scores, and (on Builder) history.
+            Install: <code className="text-white text-base">uvx kashrock-mcp</code>.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
@@ -128,7 +106,7 @@ export default function McpPage() {
           <div>
             <h2 className="text-2xl font-medium text-white mb-4">What your plan unlocks</h2>
             <ul className="space-y-3">
-              {TIERS.map((row) => (
+              {MCP_TIERS.map((row) => (
                 <li key={row.plan} className="border-b border-white/5 pb-3">
                   <p className="text-white font-medium">{row.plan}</p>
                   <p className="text-sm text-zinc-400">{row.gets}</p>
@@ -139,7 +117,7 @@ export default function McpPage() {
           <div>
             <h2 className="text-2xl font-medium text-white mb-4">Try saying</h2>
             <ul className="space-y-3">
-              {PROMPTS.map((p) => (
+              {MCP_PROMPTS.map((p) => (
                 <li
                   key={p}
                   className="text-sm text-zinc-300 font-mono bg-black/40 border border-white/5 rounded-sm px-4 py-3"
@@ -181,6 +159,29 @@ export default function McpPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="py-16 max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4">
+              Dota 2 MCP
+            </h2>
+            <p className="text-base text-zinc-400 leading-relaxed">
+              Ask Cursor for Dota 2 props, matches, and live scores on the same esports MCP — no
+              extra server. Hobby unlocks the Dota board; Builder adds live K/D/A and history.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4">
+              Kalshi MCP
+            </h2>
+            <p className="text-base text-zinc-400 leading-relaxed">
+              Kalshi esports moneylines come through the same tools as DFS books. Ask for tonight&apos;s
+              Kalshi and Polymarket prices; the agent calls <code className="text-zinc-300">get_moneylines</code>.
+            </p>
+          </div>
         </div>
       </section>
       <FaqGrid faqs={MCP_FAQS} />
