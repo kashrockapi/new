@@ -64,7 +64,18 @@ function loginRedirect(request: NextRequest) {
   return response
 }
 
+/** Strip crawler-glued markdown `).` leftovers (e.g. `/pricing).` from `](url).`). */
+function stripMarkdownGlue(request: NextRequest) {
+  const { pathname } = request.nextUrl
+  if (!pathname.endsWith(").")) return null
+  const url = request.nextUrl.clone()
+  url.pathname = pathname.slice(0, -2) || "/"
+  return NextResponse.redirect(url, 308)
+}
+
 export function proxy(request: NextRequest) {
+  const glueRedirect = stripMarkdownGlue(request)
+  if (glueRedirect) return glueRedirect
   if (MAINTENANCE_MODE) return maintenanceResponse(request)
   const returnRedirect = checkoutReturn(request)
   if (returnRedirect) return returnRedirect
