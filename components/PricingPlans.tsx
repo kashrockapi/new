@@ -16,7 +16,7 @@ export default function PricingPlans() {
             <span className="text-3xl font-medium text-white">$0</span>
             <span className="text-zinc-500">/mo</span>
           </div>
-          <p className="text-sm font-bold text-zinc-300 mt-2">2 requests / minute</p>
+          <p className="text-sm font-bold text-zinc-300 mt-2">86,400 requests / month</p>
           <p className="text-sm text-zinc-500 mt-3">
             Try the API for free with CS2 player props — see the data shape before you pay.
           </p>
@@ -51,7 +51,7 @@ export default function PricingPlans() {
             <span className="text-3xl font-medium text-white">$29</span>
             <span className="text-zinc-500">/mo</span>
           </div>
-          <p className="text-sm font-bold text-zinc-300 mt-2">50 requests / minute</p>
+          <p className="text-sm font-bold text-zinc-300 mt-2">2,160,000 requests / month</p>
           <p className="text-sm text-zinc-500 mt-3">
             Player props and match odds across every title we cover — CS2, League, Dota 2, and more.
           </p>
@@ -93,7 +93,7 @@ export default function PricingPlans() {
             <span className="text-3xl font-medium text-white">$99</span>
             <span className="text-zinc-500">/mo</span>
           </div>
-          <p className="text-sm font-bold text-zinc-300 mt-2">100 requests / minute</p>
+          <p className="text-sm font-bold text-zinc-300 mt-2">4,320,000 requests / month</p>
           <p className="text-sm text-zinc-500 mt-3">
             Live scoreboards, past matches, and prop results so you can build and check apps end to end.
           </p>
@@ -136,9 +136,9 @@ export default function PricingPlans() {
             <span className="text-3xl font-medium text-white">$249</span>
             <span className="text-zinc-500">/mo</span>
           </div>
-          <p className="text-sm font-bold text-zinc-300 mt-2">250 requests / minute</p>
+          <p className="text-sm font-bold text-zinc-300 mt-2">10,800,000 requests / month</p>
           <p className="text-sm text-zinc-500 mt-3">
-            More requests per minute for live products, plus first look at new sports we add.
+            More monthly requests for live products, plus first look at new sports we add.
           </p>
         </div>
         <ul className="space-y-3 mb-8 flex-1">
@@ -148,7 +148,7 @@ export default function PricingPlans() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
-            <span className="text-zinc-300">2.5× more requests per minute than Builder</span>
+            <span className="text-zinc-300">2.5× more requests than Builder</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
