@@ -6,6 +6,7 @@ import LandingAuthNav from '@/components/LandingAuthNav';
 import BookMarquee from '@/components/BookMarquee';
 import PricingPlans from '@/components/PricingPlans';
 import { LiveCs2PropsPane } from '@/components/landing/LiveCs2PropsPane';
+import { LiveTryMeGrading } from '@/components/landing/LiveTryMeGrading';
 import { SiteFooterLinks } from '@/components/seo/SiteFooterLinks';
 import { SportLogoRow } from '@/components/seo/SportLogoRow';
 
@@ -196,24 +197,7 @@ export default function LandingPage() {
                   Automatically verify statistical props (matched/unmatched/push) from final stats — perfect for dashboards and model validation.
                 </p>
               </div>
-              <div className="w-full md:w-64 bg-[#08090A] border border-white/10 rounded-sm p-4 font-mono text-xs">
-                <div className="flex justify-between mb-2 pb-2 border-b border-white/5">
-                  <span className="text-zinc-500">Example</span>
-                  <span className="text-zinc-500">Result</span>
-                </div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-zinc-300">s1mple o 21.5 Kills</span>
-                  <span className="text-emerald-400">VERIFIED</span>
-                </div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-zinc-300">faker o 6.5 Assists</span>
-                  <span className="text-red-400">UNMATCHED</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-zinc-300">Team Total Rounds</span>
-                  <span className="text-yellow-400">PUSH</span>
-                </div>
-              </div>
+              <LiveTryMeGrading />
             </div>
 
             <div className="col-span-1 bg-[#0C0D0F] border border-white/10 rounded-sm p-8 group hover:border-white/20 transition-colors">

@@ -47,7 +47,7 @@ const STRUGGLES = [
   },
   {
     title: "Prediction markets and books do not share a schema",
-    body: "Kalshi and Polymarket speak probability. Thunderpick speaks American. Without de-vig and join keys, you cannot build a real consensus.",
+    body: "Kalshi and Polymarket speak probability. Sportsbooks and DFS Teams speak American. Without de-vig and join keys, you cannot build a real consensus.",
   },
   {
     title: "Raw edge spam is noise",
@@ -101,7 +101,7 @@ export default function EsportsConsensusApiPage() {
             <span className="seo-grad">Fair lines, gated edges.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-            De-vig Thunderpick, Kalshi, and Polymarket into one fair probability per outcome. Surface
+            De-vig sportsbooks, DFS Teams, Kalshi, and Polymarket into one fair probability per outcome. Surface
             only edges that clear liquidity and agreement gates —{" "}
             <code className="text-white">GET /v6/esports/{"{sport}"}/lines</code>.
           </p>
@@ -127,8 +127,8 @@ export default function EsportsConsensusApiPage() {
           Why consensus odds beat a single book
         </h2>
         <p className="text-base text-zinc-400 max-w-3xl mb-10 leading-relaxed">
-          If you searched for fair esports odds, prediction-market priors, or a Kalshi + Polymarket +
-          sportsbook join — this is the product. Not another scrape. A consensus layer.
+          If you searched for fair esports odds, prediction-market priors, or a sportsbook + DFS Teams +
+          Kalshi/Polymarket join — this is the product. Not another scrape. A consensus layer.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {STRUGGLES.map((item) => (

@@ -32,7 +32,7 @@ export const MCP_TOOLS: McpTool[] = [
   { id: "get_props", when: "DFS player props only. Sandbox=CS2; Hobby+=all sports. Media on links.", tier: "sandbox", group: "board" },
   { id: "get_player_props", when: "DFS + sportsbook named-player props. board=dfs|main|all; filter by player or market.", tier: "sandbox", group: "board" },
   { id: "get_moneylines", when: "Team match moneylines from consensus lines board.", tier: "hobby", group: "board" },
-  { id: "get_lines", when: "Consensus team mainlines across sportsbooks + prediction markets.", tier: "hobby", group: "board" },
+  { id: "get_lines", when: "Consensus team mainlines across sportsbooks, DFS Teams, and prediction markets.", tier: "hobby", group: "board" },
   { id: "get_gaps", when: "DFS book-vs-book line spreads (same prop, different lines).", tier: "hobby", group: "board" },
   { id: "get_coverage", when: "Per-book prop counts / freshness.", tier: "sandbox", group: "board" },
   { id: "get_media", when: "Resolve player faces + team logos by name/id.", tier: "sandbox", group: "board" },

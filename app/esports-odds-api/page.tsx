@@ -27,8 +27,8 @@ export default function EsportsOddsApiPage() {
           </h1>
           <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
             Pull esports odds and lines for CS2, Valorant, League of Legends, Dota 2, Call of Duty, Rainbow Six, Mobile Legends, and Deadlock with an instant key. Compare DFS
-            books plus Thunderpick sportsbook prices and Kalshi / Polymarket prediction-market mainlines on the
-            same canonical <code className="text-white">propId</code>:{" "}
+            player props, DFS Teams mainlines, sportsbook prices, and Kalshi / Polymarket prediction-market quotes on the
+            same canonical ids:{" "}
             <code className="text-white">GET /v6/esports/{"{sport}"}/props</code> and consensus{" "}
             <code className="text-white">GET /v6/esports/{"{sport}"}/lines</code>.
           </p>

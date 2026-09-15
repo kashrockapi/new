@@ -109,6 +109,10 @@ export default function PricingPlans() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
+            <span className="text-zinc-300">Live WebSocket: 2 connections / 5 match subscriptions</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
             <span className="text-zinc-300">Upcoming, live, and finished match schedules</span>
           </li>
           <li className="flex items-start gap-3">
@@ -133,12 +137,12 @@ export default function PricingPlans() {
         <div className="mb-4">
           <h3 className="text-base font-medium text-white uppercase tracking-wider mb-2">Pro</h3>
           <div className="flex items-baseline gap-1">
-            <span className="text-3xl font-medium text-white">$249</span>
+            <span className="text-3xl font-medium text-white">$180</span>
             <span className="text-zinc-500">/mo</span>
           </div>
           <p className="text-sm font-bold text-zinc-300 mt-2">10,800,000 requests / month</p>
           <p className="text-sm text-zinc-500 mt-3">
-            More monthly requests for live products, plus first look at new sports we add.
+            Highest public throughput plus more concurrent live WebSocket connections and match subscriptions.
           </p>
         </div>
         <ul className="space-y-3 mb-8 flex-1">
@@ -148,11 +152,15 @@ export default function PricingPlans() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
-            <span className="text-zinc-300">2.5× more requests than Builder</span>
+            <span className="text-zinc-300">10 concurrent live WebSocket connections</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
-            <span className="text-zinc-300">First access when we add new sports</span>
+            <span className="text-zinc-300">25 concurrent live match subscriptions</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
+            <span className="text-zinc-300">Full-board live subscribe (game_id=&quot;*&quot;)</span>
           </li>
         </ul>
         <div className="mt-auto">

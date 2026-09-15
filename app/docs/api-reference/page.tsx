@@ -27,7 +27,7 @@ const ROUTES: { path: string; note: string }[] = [
   },
   {
     path: 'GET /v6/esports/{sport}/lines',
-    note: 'Consensus team main lines (match / map / totals / handicap) across sportsbooks + prediction markets. Hobby+.',
+    note: 'Consensus team main lines (sportsbooks + DFS Teams + prediction markets). Upcoming only by default (live_only=true). Hobby+.',
   },
   { path: 'GET /v6/esports/{sport}/fixtures', note: 'Full schedule board. Builder plan.' },
   { path: 'GET /v6/esports/{sport}/matches', note: 'Filtered matches. status=upcoming|live|finished. Builder plan.' },

@@ -8,7 +8,7 @@ import { API_BASE } from '@/lib/docs'
 
 export const metadata: Metadata = {
   title: 'Lines endpoint',
-  description: 'GET lines — consensus team main lines across books and prediction markets.',
+  description: 'GET lines — consensus team main lines across sportsbooks, DFS Teams, and prediction markets.',
   alternates: selfAlternates('/docs/endpoints/lines'),
 }
 
@@ -129,9 +129,9 @@ const FIELDS = [
   { field: 'map', meaning: 'Map number for map_winner only. null on match_winner / totals / handicap.' },
   { field: 'line', meaning: 'Set for total_maps and map_handicap. null on match_winner / map_winner.' },
   { field: 'consensus_probability', meaning: 'De-vigged, venue-weighted fair probability for the outcome.' },
-  { field: 'best_price', meaning: 'Best payout on the outcome: decimal, implied prob, edge_pct.' },
+  { field: 'best_price', meaning: 'Best payout on the outcome: decimal, implied prob, edge_pct, and links.bet when the winning source has a URL.' },
   { field: 'edge_pct', meaning: 'EV vs consensus: consensus × decimal − 1. Positive = value (informational).' },
-  { field: 'sources[]', meaning: 'Per-venue price. Thunderpick volume/liquidity are null (sportsbook). Kalshi uses volume/OI. Polymarket uses volume/liquidity.' },
+  { field: 'sources[]', meaning: 'Per-venue price. Includes links.bet when the underlying prop has a bet/market/event URL (sportsbooks, DFS Teams, prediction markets).' },
   { field: 'quality', meaning: 'Gate flags: source_count, max_disagreement, unreliable, low_confidence, suspect_edge, surfaced.' },
   { field: 'top_edges', meaning: 'Only markets that clear every quality gate. Thin or disagreeing markets stay in events only.' },
 ]
@@ -141,8 +141,8 @@ export default function LinesPage() {
     <DocsShell active="lines">
       <h1 className="text-4xl font-semibold text-white mb-4 tracking-tight">Lines</h1>
       <p className="text-lg text-zinc-400 mb-8">
-        Cross-venue consensus for match/map mainlines across sportsbooks (Bovada, Thunderpick, Cloudbet, BetRivers) + Kalshi + Polymarket prediction markets.
-        De-vig, weighted fair probability, and gated edges.
+        Cross-venue consensus for match/map mainlines across sportsbooks (Bovada, Thunderpick, Cloudbet, BetRivers, Pinnacle), DFS Teams (PrizePicks / Underdog / Sleeper), and Kalshi + Polymarket prediction markets.
+        De-vig, weighted fair probability, and gated edges. Upcoming events only by default.
       </p>
       <Route path="/v6/esports/{sport}/lines" />
       <p className="text-sm text-zinc-400 mb-4">
@@ -166,6 +166,11 @@ export default function LinesPage() {
             name: 'pm_weight',
             type: 'float',
             note: 'Prediction-market weight vs sportsbook (default 1.5)',
+          },
+          {
+            name: 'live_only',
+            type: 'bool',
+            note: 'true (default) = upcoming only; false = include started/past kickoffs still on the tape',
           },
         ]}
       />
@@ -194,9 +199,9 @@ export default function LinesPage() {
 
       <h2 className="text-2xl font-semibold text-white mb-3">How consensus works</h2>
       <p className="text-sm text-zinc-400 mb-4 leading-relaxed">
-        Prediction markets are read as probabilities. Thunderpick American odds are converted to implied probability,
-        then each source is de-vigged so outcomes sum to 1.0. Consensus is a weighted mean (prediction markets default
-        weight 1.5). Edge is informational EV vs that fair number — not betting advice.
+        Prediction markets are read as probabilities. Sportsbook and DFS Teams American odds are converted to implied
+        probability, then each source is de-vigged so outcomes sum to 1.0. Consensus is a weighted mean (prediction
+        markets default weight 1.5). Edge is informational EV vs that fair number — not betting advice.
       </p>
       <p className="text-sm text-zinc-400 mb-4 leading-relaxed">
         Hard quality gates before a pick is surfaced in <code className="text-white">top_edges</code>: Kalshi/Polymarket

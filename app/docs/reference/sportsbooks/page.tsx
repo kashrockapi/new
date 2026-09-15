@@ -28,7 +28,7 @@ const LOGO_BY_NAME = Object.fromEntries(BOOK_LOGOS.map((b) => [b.name, b.src]))
 const GROUPS: { title: string; blurb: string; ids: string[] }[] = [
   {
     title: 'DFS apps',
-    blurb: 'Player props on the same propId schema.',
+    blurb: 'Player props on /props. PrizePicks, Underdog, and Sleeper also publish DFS Teams mainlines onto /lines.',
     ids: ['prizepicks', 'underdog', 'dabble', 'sleeper', 'betr', 'boom', 'pick6', 'parlayplay'],
   },
   {
@@ -38,7 +38,7 @@ const GROUPS: { title: string; blurb: string; ids: string[] }[] = [
   },
   {
     title: 'Prediction markets',
-    blurb: 'Probability-priced match/map markets. Feed GET /{sport}/lines consensus.',
+    blurb: 'Probability-priced match/map markets. Feed GET /{sport}/lines consensus with sportsbooks and DFS Teams.',
     ids: ['kalshi', 'polymarket'],
   },
 ]
@@ -57,7 +57,7 @@ export default function BooksPage() {
         <Link href="/docs/endpoints/player-props" className="text-white underline">
           /player-props
         </Link>
-        . Team mainlines (sportsbooks + Kalshi/Polymarket as themselves):{' '}
+        . Team mainlines (sportsbooks + DFS Teams + Kalshi/Polymarket):{' '}
         <Link href="/docs/endpoints/lines" className="text-white underline">
           /lines
         </Link>

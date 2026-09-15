@@ -17,12 +17,12 @@ const PATH = "/esports-api-pricing"
 const URL = `https://www.kashrock.com${PATH}`
 const TITLE = "Esports API Pricing — Free Tier to Pro, Published Rates | KashRock"
 const DESCRIPTION =
-  "Esports API pricing with no sales call: free Sandbox for CS2 props, Hobby $29/mo, Builder $99/mo, Pro $249/mo. Transparent plans for DFS props, odds, and match data."
+  "Esports API pricing with no sales call: free Sandbox for CS2 props, Hobby $29/mo, Builder $99/mo, Pro $180/mo. Transparent plans for DFS props, odds, and match data."
 
 const FAQS = [
   {
     q: "How much does an esports API cost?",
-    a: "KashRock publishes flat rates: Sandbox $0, Hobby $29/mo, Builder $99/mo, Pro $249/mo. No enterprise quote required to see the number.",
+    a: "KashRock publishes flat rates: Sandbox $0, Hobby $29/mo, Builder $99/mo, Pro $180/mo. No enterprise quote required to see the number.",
   },
   {
     q: "Is there a free esports API tier?",
@@ -128,7 +128,7 @@ export default function EsportsApiPricingPage() {
               <>Sandbox — prove CS2 props schema and auth</>,
               <>Hobby ($29) — multi-sport boards and day-to-day production</>,
               <>Builder ($99) — higher limits and consensus /lines</>,
-              <>Pro ($249) — max throughput for heavier products</>,
+              <>Pro ($180) — max throughput for heavier products</>,
             ]}
           />
           <p className="mt-6">

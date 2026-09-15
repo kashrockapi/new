@@ -6,7 +6,7 @@ export const CS2_DESCRIPTION =
 export const ODDS_TITLE =
   "Esports Odds API — Normalized Lines Across Books for CS2, Valorant, LoL, Dota & more | KashRock"
 export const ODDS_DESCRIPTION =
-  "Affordable esports odds API. Compare DFS books, Thunderpick sportsbook prices, and Kalshi / Polymarket prediction-market mainlines on one propId — sharper models, instant key."
+  "Affordable esports odds API. Compare DFS player props, DFS Teams mainlines, sportsbook prices, and Kalshi / Polymarket prediction-market quotes — sharper models, instant key."
 
 export const ABIOS_TITLE =
   "The Abios Alternative — Esports Data Without Enterprise Pricing | KashRock"

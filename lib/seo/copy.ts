@@ -44,7 +44,7 @@ export const DATA_API_FAQS = [
   },
   {
     q: "Do you pull prediction markets for modeling?",
-    a: "Yes. Kalshi and Polymarket esports mainlines (plus Thunderpick sportsbook prices) land on the same schema and power GET /v6/esports/{sport}/lines consensus — useful priors so models are not stuck on one venue.",
+    a: "Yes. Kalshi and Polymarket esports mainlines (plus sportsbooks and DFS Teams) land on the same schema and power GET /v6/esports/{sport}/lines consensus — useful priors so models are not stuck on one venue.",
   },
 ] as const
 
