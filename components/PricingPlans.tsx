@@ -137,7 +137,7 @@ export default function PricingPlans() {
         <div className="mb-4">
           <h3 className="text-base font-medium text-white uppercase tracking-wider mb-2">Pro</h3>
           <div className="flex items-baseline gap-1">
-            <span className="text-3xl font-medium text-white">$180</span>
+            <span className="text-3xl font-medium text-white">$199</span>
             <span className="text-zinc-500">/mo</span>
           </div>
           <p className="text-sm font-bold text-zinc-300 mt-2">10,800,000 requests / month</p>

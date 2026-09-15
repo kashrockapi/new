@@ -6,7 +6,7 @@ import { MarketingShell } from "@/components/seo/MarketingShell"
 export const metadata: Metadata = {
   title: { absolute: "Esports Data API Pricing — Plans from Free to Pro | KashRock" },
   description:
-    "Transparent esports data API pricing. Free Sandbox for CS2 props, Hobby from $29/mo, Builder $99/mo, Pro $180/mo. Instant key — no enterprise quote.",
+    "Transparent esports data API pricing. Free Sandbox for CS2 props, Hobby from $29/mo, Builder $99/mo, Pro $199/mo. Instant key — no enterprise quote.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Esports Data API Pricing | KashRock",
