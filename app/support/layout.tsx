@@ -4,9 +4,9 @@ import { selfAlternates } from "@/lib/seo/site"
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "KashRock support and ticket help for the esports data API.",
+  description: "Email KashRock support at support@kashrock.com.",
   alternates: selfAlternates("/support"),
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 }
 
 export default function SupportLayout({

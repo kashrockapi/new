@@ -303,7 +303,7 @@ function LegalContent() {
                 <div className="flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-600">
                   <div>© 2025 KashRock Inc. All rights reserved.</div>
                 <div className="flex gap-4 mt-2 sm:mt-0">
-                  <Link href="/support" className="hover:text-zinc-400 transition-colors">Support</Link>
+                  <a href="mailto:support@kashrock.com" className="hover:text-zinc-400 transition-colors">Support</a>
                   <Link href="/" className="hover:text-zinc-400 transition-colors">Home</Link>
                 </div>
                 </div>

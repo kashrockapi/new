@@ -36,7 +36,7 @@ export default function PricingPage() {
         <PricingPlans />
         <p className="text-center text-sm text-zinc-500 mt-10">
           Questions about coverage or volume?{" "}
-          <a href="/support" className="text-white underline underline-offset-2">
+          <a href="mailto:support@kashrock.com" className="text-white underline underline-offset-2">
             Contact support
           </a>
           .

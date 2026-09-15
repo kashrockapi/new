@@ -19,7 +19,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     { name: 'Affiliate', href: '/dashboard/affiliate', icon: LinkIcon },
     { name: 'Settings', href: '/dashboard/settings', icon: SettingsIcon },
     { name: 'Docs', href: '/docs', icon: BookIcon },
-    { name: 'Support', href: '/support', icon: SupportIcon },
+    { name: 'Support', href: 'mailto:support@kashrock.com', icon: SupportIcon },
   ];
 
   return (
@@ -40,21 +40,30 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => {
-              const isActive = pathname === item.href || (item.href !== '/dashboard' && pathname.startsWith(item.href));
+              const isMail = item.href.startsWith('mailto:')
+              const isActive =
+                !isMail &&
+                (pathname === item.href ||
+                  (item.href !== '/dashboard' && pathname.startsWith(item.href)))
+              const className = `flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-sm transition-all duration-200 ${
+                isActive
+                  ? 'bg-[#7C3AED]/10 text-[#7C3AED]'
+                  : 'text-[#635F69] hover:text-[#7C3AED] hover:bg-[#7C3AED]/5'
+              }`
+              if (isMail) {
+                return (
+                  <a key={item.name} href={item.href} className={className}>
+                    <item.icon className="w-4 h-4" />
+                    {item.name}
+                  </a>
+                )
+              }
               return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-sm transition-all duration-200 ${
-                    isActive
-                      ? 'bg-[#7C3AED]/10 text-[#7C3AED]'
-                      : 'text-[#635F69] hover:text-[#7C3AED] hover:bg-[#7C3AED]/5'
-                  }`}
-                >
+                <Link key={item.name} href={item.href} className={className}>
                   <item.icon className="w-4 h-4" />
                   {item.name}
                 </Link>
-              );
+              )
             })}
           </nav>
 
